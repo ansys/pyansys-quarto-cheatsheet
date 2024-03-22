@@ -1,0 +1,79 @@
+---
+title: cheatsheet
+format:
+   cheatsheet-pdf:
+      keep-tex: true
+version: 0.1.0
+---
+
+# Launch PyAEDT
+
+Launch an HFSS instance locally:
+
+```{code}
+import pyaedt
+# test
+hfss = pyaedt.Hfss(specified_version="2023.1",
+	non_graphical=False,
+	new_desktop_session=True,
+	projectname="Project_name",
+	designname="Design_name")
+```
+
+Exit your local instance:
+```{code}
+hfss.release_desktop()
+```
+# variable class
+The \texttt{hfss.variable$\_$manager} class handles all variables.
+\newline
+Create a variable that only applies to this design:
+```{code}
+hfss["dim"] = "1mm"
+```
+# Material classes
+The \texttt{hfss.materials} class is used to access the materials library.
+```{code}
+my_mat = hfss.materials.add_material("myMat")
+my_mat.permittivity = 3.5
+my_mat.conductivity = 450000
+my_mat.permeability = 1.5
+```
+# Launch PyAEDT
+
+Launch an HFSS instance locally:
+
+```{code}
+import pyaedt
+hfss = pyaedt.Hfss(specified_version="2023.1",
+	non_graphical=False,
+	new_desktop_session=True,
+	projectname="Project_name",
+	designname="Design_name")
+```
+
+Exit your local instance:
+```{code}
+hfss.release_desktop()
+```
+# variable class
+The \texttt{hfss.variable$\_$manager} class handles all variables.
+\newline
+Create a variable that only applies to this design:
+```{code}
+hfss["dim"] = "1mm"
+```
+# Material classes
+The \texttt{hfss.materials} class is used to access the materials library.
+```{code}
+my_mat = hfss.materials.add_material("myMat")
+my_mat.permittivity = 3.5
+my_mat.conductivity = 450000
+my_mat.permeability = 1.5
+```
+
+## References from PyAEDT documentation
+
+- [Getting Started](https://aedt.docs.pyansys.com/version/stable/Getting_started/index.html)
+- [HFSS](https://aedt.docs.pyansys.com/version/stable/HFSS/index.html)
+- [Q3D](https://aedt.docs.pyansys.com/version/stable/Q3D/index.html)

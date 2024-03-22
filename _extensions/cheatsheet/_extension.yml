@@ -24,7 +24,7 @@ contributes:
           \usepackage[x11names]{xcolor}
           \usepackage[T1]{fontenc}
           \usepackage[utf8]{inputenc}
-      template-partials: ["partials/before-body.tex", partials/title.tex, partials/_authors.tex, partials/after-body.tex]
+      template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - cheatsheet.sty
         - ansys.png
