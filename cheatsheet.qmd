@@ -10,17 +10,16 @@ version: 0.1.0
 
 Launch an HFSS instance locally:
 
-```{code}
+~~~python
 import pyaedt
 # test
-hfss = pyaedt.Hfss(specified_version="2023.1",
+hfss = pyaedt.Hfss(specified_version="2023.2",
 	non_graphical=False,
 	new_desktop_session=True,
 	projectname="Project_name",
 	designname="Design_name")
-```
+~~~
 
-Exit your local instance:
 ```{code}
 hfss.release_desktop()
 ```
