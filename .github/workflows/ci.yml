@@ -33,6 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           quarto install extension . --no-prompt
+          python3 -m pip install jupyter
 
       - name: Render book
         run: |
