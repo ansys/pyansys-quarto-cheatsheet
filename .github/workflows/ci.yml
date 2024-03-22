@@ -4,6 +4,11 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
 name: Render and Publish
 
 jobs:
@@ -27,7 +32,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          quarto install extension .
+          quarto install extension . --no-prompt
 
       - name: Render book
         run: |
