@@ -1,0 +1,32 @@
+title: cheatsheet
+version: 0.1.0
+contributes: 
+  formats: 
+    pdf:
+      documentclass: article
+      fontsize: 9pt
+      classoption: landscape
+      authorcols: false
+      header-includes: |
+          \usepackage[landscape]{geometry}
+          \usepackage{amsmath,amsthm,amsfonts,amssymb}
+          \usepackage{color,graphicx}
+          \usepackage[bookmarks=false]{hyperref}
+          \usepackage{wrapfig}
+          \usepackage{eso-pic}
+          \usepackage{float}
+          \usepackage{tabularx}
+          \usepackage{multicol}
+          \usepackage{calc}
+          \usepackage{ifthen}
+          \usepackage{multirow}
+          \usepackage{listings}
+          \usepackage[x11names]{xcolor}
+          \usepackage[T1]{fontenc}
+          \usepackage[utf8]{inputenc}
+      template-partials: ["partials/before-body.tex", partials/title.tex, partials/_authors.tex, partials/after-body.tex]
+      format-resources:
+        - cheatsheet.sty
+        - ansys.png
+        - bground.png
+        - slash.png

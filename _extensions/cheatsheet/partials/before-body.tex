@@ -1,0 +1,26 @@
+\raggedright
+\footnotesize
+$if(title)$
+\begin{center}
+     \Huge{\textbf{$title$}} \\
+\end{center}
+$endif$
+
+$if(version)$
+\begin{center}
+     \small{\textbf{Version: $version$}} \\
+\end{center}
+$endif$
+\AddToShipoutPicture*
+	{\put(670,577.5){\includegraphics[height = 1.2cm]{ansys.png}}}
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{bground.png}}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{2pt}}
+
+\begin{multicols}{3}
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
