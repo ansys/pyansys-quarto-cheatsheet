@@ -1,0 +1,49 @@
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+
+name: Render and Publish
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # To install LaTeX to build PDF book 
+          tinytex: true 
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          quarto install extension . --no-prompt
+          python3 -m pip install jupyter
+
+      - name: Render book
+        run: |
+          quarto render cheatsheet.qmd --to cheatsheet-pdf
+
+      - name: Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          files: cheatsheet.pdf
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repo: ${{ github.repository }}
+          branch: gh-pages
+          commit_message: "Publish PDF"
