@@ -4,7 +4,7 @@
 ## Installation
 
 ```bash
-quato use ansys-internal/pyansys-quarto-cheatsheet
+quarto use ansys-internal/pyansys-quarto-cheatsheet
 ```
 This will install the extension and create an example qmd file that you can use as a starting place for your article.
 
