@@ -38,7 +38,9 @@ jobs:
           quarto install extension . --no-prompt
           python3 -m pip install jupyter
 
+      # publish only when the main branch is updated
       - name: Publish
+        if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
