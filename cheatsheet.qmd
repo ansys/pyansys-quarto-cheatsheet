@@ -30,7 +30,8 @@ Specify a job name, number of processors, and working directory:
 ```{python}
 jname = 'user_jobname'
 path = '<path of directory>'
-mapdl = launch_mapdl(nproc=2, run_location=path, jobname=jname)
+mapdl = launch_mapdl(
+	nproc=2, run_location=path, jobname=jname)
 ```
 
 Connect to an existing instance of MAPDL at IP address 192.168.1.30 and port 50001:
@@ -122,9 +123,11 @@ node_num = mapdl.mesh.nnum
 # Save node numbers of all nodes to an array
 node_num_all = mapdl.mesh.nnum_all
 
-# Get element numbers of currently selected elements
+# Get element numbers of currently 
+# selected elements
 elem_num = mapdl.mesh.enum
-# Get all element numbers, including those not selected
+# Get all element numbers, including 
+# those not selected
 elem_num_all = mapdl.mesh.enum_all
 ```
 
@@ -166,9 +169,11 @@ mapdl.eplot(show_node_numbering, vtk)
 mapdl.vplot(nv1, nv2, ninc, degen, scale, ...)
 # Display selected areas
 mapdl.aplot(na1, na2, ninc, degen, scale, ...)
-# Display selected lines without MAPDL plot symbols
+# Display selected lines without MAPDL 
+# plot symbols
 mapdl.lplot(vtk=True, cpos='xy', line_width=10)
-# Save PNG file of line plot with MAPDL coordinate symbol
+# Save PNG file of line plot with MAPDL 
+# coordinate symbol
 mapdl.psymb('CS', 1)
 mapdl.lplot(vtk=False)
 ```

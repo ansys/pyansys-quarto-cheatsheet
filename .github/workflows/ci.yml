@@ -37,6 +37,10 @@ jobs:
         run: |
           quarto install extension . --no-prompt
           python3 -m pip install jupyter
+        
+      - name: Render book
+        run: |
+          quarto render cheatsheet.qmd --to cheatsheet-pdf
 
       # publish only when the main branch is updated
       - name: Publish
