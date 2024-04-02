@@ -1,5 +1,6 @@
 ---
 title: Test Cheat Sheet
+format: cheatsheet-pdf
 version: 0.1.0
 ---
 

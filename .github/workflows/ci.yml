@@ -38,15 +38,9 @@ jobs:
           quarto install extension . --no-prompt
           python3 -m pip install jupyter
 
-      - name: Render book
-        run: |
-          quarto render cheatsheet.qmd --to cheatsheet-pdf
-
       - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
-          files: _build/cheatsheet.pdf
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repo: ${{ github.repository }}
-          branch: gh-pages
-          commit_message: "Publish PDF"
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
