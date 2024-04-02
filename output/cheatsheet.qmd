@@ -23,6 +23,8 @@ hfss = pyaedt.Hfss(specified_version="2023.2",
 ```{code}
 hfss.release_desktop()
 ```
+
+```{code}
 # Variable class
 The *hfss.variable_manager* class handles all variables.
 

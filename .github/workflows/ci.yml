@@ -21,9 +21,8 @@ jobs:
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
+        run: |
+          quarto --version
 
       - name: Setup Python
         uses: actions/setup-python@v5
