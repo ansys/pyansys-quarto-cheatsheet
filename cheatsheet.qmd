@@ -2,6 +2,12 @@
 title: Test Cheat Sheet
 format: cheatsheet-pdf
 version: 0.1.0
+footer: Getting started with PyMAPDL
+footerlinks:
+- urls: https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html
+  text: PyMAPDL Documentation
+- urls: https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html
+  text: PyMAPDL Documentation
 ---
 
 # Launch PyAEDT

@@ -1,1 +1,15 @@
 \end{multicols}
+\vspace{-0.15cm}
+\AtEndDocument{
+    \noindent\makebox[\linewidth]{\rule{\paperwidth}{4pt}}
+$if(footer)$
+\begin{center}
+$footer$
+$if(footerlinks)$
+$for(footerlinks)$
+\includegraphics[height=\fontcharht\font`\S]{slash.png} \href{$footerlinks.urls$}{{\color{blue}$footerlinks.text$}}
+$endfor$
+$endif$
+$endif$
+\end{center}
+}
