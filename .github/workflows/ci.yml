@@ -21,6 +21,8 @@ jobs:
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: Check Quarto version
         run: |
@@ -43,7 +45,7 @@ jobs:
       - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
-          files: cheatsheet.pdf
+          files: _build/cheatsheet.pdf
           token: ${{ secrets.GITHUB_TOKEN }}
           repo: ${{ github.repository }}
           branch: gh-pages

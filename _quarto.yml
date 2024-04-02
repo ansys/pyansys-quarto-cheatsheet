@@ -1,2 +1,2 @@
-project:
-  output-dir: _output
+latex-output-dir: _build
+latex-clean: true

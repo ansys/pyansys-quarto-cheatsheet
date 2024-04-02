@@ -1,8 +1,5 @@
 ---
 title: Test Cheat Sheet
-format:
-   cheatsheet-pdf:
-      keep-tex: true
 version: 0.1.0
 ---
 

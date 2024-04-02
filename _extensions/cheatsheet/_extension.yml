@@ -7,6 +7,7 @@ contributes:
       fontsize: 9pt
       classoption: landscape
       authorcols: false
+      monofont: GoMono
       header-includes: |
           \usepackage[landscape]{geometry}
           \usepackage{amsmath,amsthm,amsfonts,amssymb}
@@ -30,3 +31,5 @@ contributes:
         - ansys.png
         - bground.png
         - slash.png
+      cache: false
+      resource-path: ["_output"]
