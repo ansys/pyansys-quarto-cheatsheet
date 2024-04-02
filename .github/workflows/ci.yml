@@ -22,8 +22,11 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
+          tinytex: true
+
+      - name: Check Quarto version
+        run: |
+          quarto --version
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -34,16 +37,16 @@ jobs:
         run: |
           quarto install extension . --no-prompt
           python3 -m pip install jupyter
-
+        
       - name: Render book
         run: |
           quarto render cheatsheet.qmd --to cheatsheet-pdf
 
+      # publish only when the main branch is updated
       - name: Publish
+        if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
-          files: cheatsheet.pdf
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repo: ${{ github.repository }}
-          branch: gh-pages
-          commit_message: "Publish PDF"
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

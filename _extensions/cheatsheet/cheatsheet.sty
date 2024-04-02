@@ -38,6 +38,9 @@
 
 % Turn off header and footer
 \pagestyle{empty}
+\RequirePackage{fontspec}
+\RequirePackage{seqsplit}
+\RequirePackage{sourcecodepro}
 
 % Redefine section commands to use less space
 \makeatletter
@@ -47,14 +50,13 @@
                                 {\normalfont\large\bfseries\includegraphics[height=\fontcharht\font`\S]{slash.png}\hspace{0.3em}}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
                                 {-1explus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
+                                {0.6ex plus .6ex}%
                                 {\normalfont\normalsize\bfseries}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
 \makeatother
-
 \definecolor{silver}{RGB}{217,216,214}
 \definecolor{gold}{RGB}{255,183,27}
 \definecolor{steel}{RGB}{137,138,141}
@@ -68,18 +70,19 @@
 \definecolor{black}{RGB}{0,0,0}
 \RequirePackage{framed}
 \definecolor{shadecolor}{RGB}{217,216,214} % Set the desired background color
+% renew if shaded is there
+\ifdefined\Shaded
 \renewenvironment{Shaded}{
-  \def\FrameCommand{{\color{shadecolor}\vrule width 3pt}\fboxsep=\FrameSep \colorbox{shadecolor}} % Adjust frame properties
+  \def\FrameCommand{{\color{shadecolor}\vrule width 1pt}\colorbox{shadecolor}} % Adjust frame properties
   \MakeFramed{\advance\hsize-\width \FrameRestore \normalfont}}%
- {\endMakeFramed}
-
+{\endMakeFramed}
 \renewcommand{\CommentTok}[1]{\textcolor{codegreen}{#1}}
 \renewcommand{\CommentVarTok}[1]{\textcolor{magenta}{\textit{#1}}}
 \renewcommand{\ImportTok}[1]{\textcolor{magenta}{#1}}
 \renewcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
 \renewcommand{\KeywordTok}[1]{\textcolor{codepurple}{#1}}
 \renewcommand{\NormalTok}[1]{\textcolor{black}{#1}}
-
+\fi
 \lstdefinestyle{python_style}{
 	backgroundcolor=\color{silver},   
 	commentstyle=\color{codegreen},

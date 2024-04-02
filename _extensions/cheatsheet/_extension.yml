@@ -30,3 +30,5 @@ contributes:
         - ansys.png
         - bground.png
         - slash.png
+      cache: false
+      resource-path: ["_output"]
