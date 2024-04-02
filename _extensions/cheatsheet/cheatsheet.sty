@@ -38,6 +38,8 @@
 
 % Turn off header and footer
 \pagestyle{empty}
+\RequirePackage{fontspec}
+\RequirePackage[scale=0.95]{sourcecodepro}
 
 % Redefine section commands to use less space
 \makeatletter
@@ -47,14 +49,13 @@
                                 {\normalfont\large\bfseries\includegraphics[height=\fontcharht\font`\S]{slash.png}\hspace{0.3em}}}
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
                                 {-1explus -.5ex minus -.2ex}%
-                                {0.5ex plus .2ex}%
+                                {0.6ex plus .6ex}%
                                 {\normalfont\normalsize\bfseries}}
 \renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
 \makeatother
-
 \definecolor{silver}{RGB}{217,216,214}
 \definecolor{gold}{RGB}{255,183,27}
 \definecolor{steel}{RGB}{137,138,141}

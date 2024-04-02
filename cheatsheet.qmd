@@ -1,14 +1,14 @@
 ---
-title: Test Cheat Sheet
+title: PyMAPDL Cheat sheet
 format: cheatsheet-pdf
 keep-tex: true
 version: 0.1.0
 footer: Getting started with PyMAPDL
 footerlinks:
-- urls: https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html
+- urls: https://mapdl-docs.pyansys.com/version/stable/
   text: PyMAPDL Documentation
 - urls: https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html
-  text: PyMAPDL Documentation
+  text: PyMAPDL Documentation test
 execute:
   eval: false
 ---
@@ -41,6 +41,7 @@ mapdl = launch_mapdl(start_instance=False,
 ```
 
 Create and exit a pool of instances:
+
 ```{python}
 # Create a pool of 10 instances
 from ansys.mapdl.core import LocalMapdlPool
@@ -50,8 +51,10 @@ pool.exit()
 ```
 
 # PyMAPDL commands
+
 PyMAPDL commands are Python statements that act as a wrapper for APDL commands. 
-For example, \texttt{ESEL, s, type, 1} is translated as:
+
+For example, *ESEL, s, type, 1* is translated as:
 ```{python}
 mapdl.esel('s', 'type', vmin=1) 
 ```
@@ -94,7 +97,7 @@ nparray = mapdl.parameters['displ_load']
 mapdl.parameters['exp_disp'] = nparray
 ```
 
-Access information using \code{*GET} and \code{*VGET} and store it in NumPy arrays:
+Access information using ``*GET`` and ``*VGET`` and store it in NumPy arrays:
 ```{python}
 # Run *GET command and return a Python value
 mapdl.get_value(entity='NODE', item1='COUNT')
@@ -104,7 +107,7 @@ mapdl.get_array(entity='NODE', item1='NLIST')
 ```
 
 # Mesh class
-Store the finite element mesh as a VTK \texttt{UnstructuredGrid} data object:
+Store the finite element mesh as a VTK *UnstructuredGrid* data object:
 
 ```{python}
 grid = mapdl.mesh.grid
@@ -126,7 +129,7 @@ elem_num_all = mapdl.mesh.enum_all
 ```
 
 # Post-processing class
-The \texttt{post\_processing} class is used for plotting and saving results to NumPy arrays.
+The *post_processing* class is used for plotting and saving results to NumPy arrays.
 ```{python}
 from ansys.mapdl.core import post_processing
 mapdl.post1()
@@ -148,7 +151,7 @@ post_processing.plot_nodal_eqv_stress(
 ```
 
 # Plotting class
-Use PyVista to interpolate data, saving the resulting stress and storing it in the underlying \texttt{UnstructuredGrid} object:
+Use PyVista to interpolate data, saving the resulting stress and storing it in the underlying *UnstructuredGrid* object:
 ```{python}
 pl = pyvista.Plotter()
 pl0 = post_processing.plot_nodal_stress(
