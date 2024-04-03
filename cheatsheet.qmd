@@ -1,7 +1,6 @@
 ---
 title: PyMAPDL Cheat sheet
 format: cheatsheet-pdf
-keep-tex: true
 version: 0.1.0
 footer: Getting started with PyMAPDL
 footerlinks:
