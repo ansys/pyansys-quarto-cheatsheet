@@ -63,13 +63,23 @@ for available options.
 > By default, code cells are executed. To disable execution, use the `execute` option.
 >
 > To disable execution and display of individual or multiple code cells,
-> utilize the `execute` option within the code cell.
+> utilize the `eval`, `echo`and similar options within the code cell.
 >  ```
 > #| eval: false
 >
 > #| echo: false
 >  ```
 
+> [!IMPORTANT]
+> The output of the code cell is displayed by default. To disable the output, use the `execute` option.
+>
+> To disable the output of individual or multiple code cells, 
+> utilize the `output` option within the code cell.
+>  ```
+> #| output: false
+>  ```
+
+
 ## Example
 
-Example of a `cheatsheet.qmd` file is placed in the current directory.
+Example of a [cheatsheet.qmd](cheatsheet.qmd) file is placed in the current directory.
