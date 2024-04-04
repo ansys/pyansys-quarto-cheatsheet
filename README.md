@@ -73,7 +73,7 @@ for available options.
 > [!IMPORTANT]
 > The output of the code cell is displayed by default. To disable the output, use the `execute` option.
 >
-> To disable the output of individual or multiple code cells, 
+> To disable the output of individual or multiple code cells,
 > utilize the `output` option within the code cell.
 >  ```
 > #| output: false
@@ -94,10 +94,13 @@ example of [``_quarto.yml``](_quarto.yml) file is placed in the current director
 ## Example
 
 Example of a [cheatsheet.qmd](cheatsheet.qmd) file is placed in the current directory.
-
+Example of complete cheatsheet for pymapdl is placed in (pymapdl cheatsheet)[pymapdl_cheatsheet_example.qmd] file.
+To render the pymapdl example cheatsheet, run the following command:
+```bash
+quarto render pymapdl_cheatsheet_example.qmd
+```
 > [!TIP]
 > If you want to open a `.qmd` file in Jupyter Notebook, follow these steps:
 > 1. Install `jupytext` by running the command: `pip install jupytext`
 > 2. Install `jupyter` by running the command: `pip install jupyter`
 > 3. Open the `.qmd` file in Jupyter Notebook with the command: `jupyter notebook cheatsheet.qmd`
-

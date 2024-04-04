@@ -1,16 +1,16 @@
 ---
-title: PyMAPDL Cheat sheet
+title: Your title here
 format: cheatsheet-pdf
-version: 0.1.0
-footer: Getting started with PyMAPDL
+version: Your version here
+footer: Your footer here
 footerlinks:
-  - urls: 'https://mapdl.docs.pyansys.com/version/stable/'
-    text: PyMAPDL Documentation
-  - urls: 'https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html'
-    text: PyMAPDL Documentation getting started
-execute:
-    # output: false
-    eval: false
+  - urls: Your URL here
+    text: Your text here
+  - urls: Your URL here
+    text: Your text here
+# uncommment the following line to not to evaluate code cells
+# execute:
+#     eval: false # Set to true to execute code cells
 jupyter:
   jupytext:
     text_representation:
@@ -24,208 +24,104 @@ jupyter:
     name: python3
 ---
 
-# Launch PyMAPDL
+# General section
 
-Launch a PyMAPDL instance locally and exit it:
+Discription of the first section goes here.
 
 ```{python}
-# Launch an instance
-from ansys.mapdl.core import launch_mapdl
-mapdl = launch_mapdl()
-# Exit the instance
-mapdl.exit()
+import os
 ```
 
-Specify a job name, number of processors, and working directory:
+# Section with code output
 
+Discription of the second section goes here.
+
+```{python}
+print("Hello World!")
+```
+
+# Section without code output
+
+This section will be evaluated but the output will not be displayed.
+```{python}
+#| output: false
+print("Hello World!")
+```
+
+# Section with code evaluation without output
+
+This section will be evaluated but the output will not be displayed.
+
+```{python}
+#| output: false
+print(os.getcwd())
+```
+
+# Section with code evaluation and output
+
+This section will be evaluated and the output will be displayed.
+
+```{python}
+print(os.getcwd())
+```
+
+# Section without code evaluation
 ```{python}
 #| eval: false
-jname = 'user_jobname'
-path = '<path of directory>'
-mapdl = launch_mapdl(
-	nproc=2, run_location=path, jobname=jname)
+print(os.getcwd())
 ```
 
-Connect to an existing instance of MAPDL at IP address 192.168.1.30 and port 50001:
+If there is no evaluation, the code cell will not be executed.
+So the output will not be displayed.
 
-```{python}
-#| eval: false
-mapdl = launch_mapdl(start_instance=False,
-    ip='192.168.1.30', port=50001)
-```
+# Section without code echo
 
-Create and exit a pool of instances:
+This section will not be evaluated and the code cell will not be displayed on
+the rendered document.
+But the output will be displayed.
 
 ```{python}
 #| echo: false
-from ansys.mapdl.core import launch_mapdl
-mapdl = launch_mapdl()
+print("Hello World!")
 ```
 
-```{python}
-#| eval: false
-# Create a pool of 10 instances
-from ansys.mapdl.core import MapdlPool
-pool = MapdlPool(10)
-# Exit the pool
-pool.exit()
-```
-
-# PyMAPDL commands
-
-PyMAPDL commands are Python statements that act as a wrapper for APDL commands.
-
-For example, *ESEL, s, type, 1* is translated as:
-
-```{python}
-mapdl.esel('s', 'type', vmin=1)
-```
-
-Commands that start with * or / have these characters removed:
-
-```{python}
-#| eval: false
-mapdl.prep7()	        # /PREP7
-mapdl.get()	        # *GET
-```
-
-In cases where removing * or / causes conflicts with other commands, a prefix "slash" or "star" is added:
-
-```{python}
-#| eval: false
-mapdl.solu()		# SOLU
-mapdl.slashsolu()	# /SOLU
-
-mapdl.vget()		# VGET
-mapdl.starvget()	# *VGET
-```
-
-Convert an existing APDL script to PyMAPDL format:
-
-```{python}
-#| eval: false
-inputfile = 'ansys_inputfile.inp'
-pyscript = 'pyscript.py'
-mapdl.convert_script(inputfile, pyscript)
-```
-
-# MAPDL class
-
-Load a table from Python to MAPDL:
-
-```{python}
-#| eval: false
-mapdl.load_table(name="abc", array=create_5d_array)
-```
-
-Access from or write parameters to the MAPDL database:
-
-```{python}
-#| eval: false
-# Save a parameter to a NumPy array
-nparray = mapdl.parameters['displ_load']
-# Create a parameter from a NumPy array
-mapdl.parameters['exp_disp'] = nparray
-```
-
-Access information using ``*GET`` and ``*VGET`` and store it in NumPy arrays:
-
-```{python}
-# Run *GET command and return a Python value
-mapdl.get_value(entity='NODE', item1='COUNT')
-
-# Run *VGET command and return a Python array
-mapdl.get_array(entity='NODE', item1='NLIST')
-```
-
-# Mesh class
-Store the finite element mesh as a VTK *UnstructuredGrid* data object:
-
-```{python}
-#| eval: false
-grid = mapdl.mesh.grid
-```
-
-Save element and node numbers to Python arrays:
-
-```{python}
-# Get an array of the nodal coordinates
-nodes = mapdl.mesh.nodes
-
-# Save node numbers of selected nodes to an array
-node_num = mapdl.mesh.nnum
-# Save node numbers of all nodes to an array
-node_num_all = mapdl.mesh.nnum_all
-
-# Get element numbers of currently
-# selected elements
-elem_num = mapdl.mesh.enum
-# Get all element numbers, including
-# those not selected
-elem_num_all = mapdl.mesh.enum_all
-```
-
-# Post-processing class
-The *post_processing* class is used for plotting and saving results to NumPy arrays.
-
-```{python}
-#| eval: false
-from ansys.mapdl.core import post_processing
-mapdl.post1()
-mapdl.set(1, 2)
-# Plot the nodal equivalent stress
-mapdl.post_processing.plot_nodal_eqv_stress()
-# Save nodal equivalent stresses to a Python array
-nod_eqv_stress = post_processing.nodal_eqv_stress()
-# Plot contour legend using dictionary
-mapdl.allsel()
-sbar_kwargs = {"color": "black",
-               "title": "Equivalent Stress (psi)",
-	       "vertical": False,
-	       "n_labels": 6}
-post_processing.plot_nodal_eqv_stress(
-    cpos='xy', background='white',
-    edge_color='black', show_edges=True,
-    scalar bar_args=sbar_kwargs, n_colors=9)
-```
-
-# Plotting class
-Use PyVista to interpolate data, saving the resulting stress and storing it in the underlying *UnstructuredGrid* object:
-
-```{python}
-#| eval: false
-pl = pyvista.Plotter()
-pl0 = post_processing.plot_nodal_stress(
-    return_plotter=True)
-pl.add(pl0.mesh)
-pl.show()
-```
-
-```{python}
-#| eval: false
-# Plot currently selected elements
-mapdl.eplot(show_node_numbering, vtk)
-# Plot selected volumes
-mapdl.vplot(nv1, nv2, ninc, degen, scale, ...)
-# Display selected areas
-mapdl.aplot(na1, na2, ninc, degen, scale, ...)
-# Display selected lines without MAPDL
-# plot symbols
-mapdl.lplot(vtk=True, cpos='xy', line_width=10)
-# Save PNG file of line plot with MAPDL
-# coordinate symbol
-mapdl.psymb('CS', 1)
-mapdl.lplot(vtk=False)
-```
-
-## References from PyMAPDL documentation
-
-- [Getting Started](https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html)
-- [MAPDL commands](https://mapdl.docs.pyansys.com/version/stable/mapdl_commands/index.html)
-- [API reference](https://mapdl.docs.pyansys.com/version/stable/api/index.html)
-
-
+# Section without code echo and output
+This code cell will not be displayed on
+the rendered document.
+And the output will not be displayed.
 ```{python}
 #| echo: false
-mapdl.exit()
+#| output: false
+print("Hello World!")
 ```
+
+# use of variables
+
+## Styles of text
+
+**Bold text**
+
+*Italic text*
+
+***Bold and italic text***
+
+## Lists and images
+1. Numbered list
+2. Numbered list
+3. Numbered list
+
+- Bullet list
+- Bullet list
+- Bullet list
+
+![image](./_extensions/cheatsheet/ansys.png)
+
+## Subsection
+
+- Add subsections as needed.
+- Add more subsections as needed.
+- Add more subsections as needed.
+
+- [link](https://www.google.com)
+- [link](https://www.google.com)
+- [link](https://www.google.com)
