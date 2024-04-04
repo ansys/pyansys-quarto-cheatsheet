@@ -79,6 +79,17 @@ for available options.
 > #| output: false
 >  ```
 
+### ``_quarto.yml`` file
+The `_quarto.yml` file is a configuration file that contains all the metadata at the project level.
+Refer to the [quarto documentation project](https://quarto.org/docs/projects/quarto-projects.html#project-metadata)
+for more information.
+
+if you want to change the output directory, add the following line to the `_quarto.yml` file.
+```yaml
+output_dir: _build
+```
+example of [``_quarto.yml``](_quarto.yml) file is placed in the current directory.
+
 
 ## Example
 
