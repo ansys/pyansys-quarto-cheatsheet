@@ -4,12 +4,21 @@ format: cheatsheet-pdf
 version: 0.1.0
 footer: Getting started with PyMAPDL
 footerlinks:
-- urls: https://mapdl-docs.pyansys.com/version/stable/
-  text: PyMAPDL Documentation
-- urls: https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html
-  text: PyMAPDL Documentation test
-execute:
-  eval: false
+  - urls: 'https://mapdl-docs.pyansys.com/version/stable/'
+    text: PyMAPDL Documentation
+  - urls: 'https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html'
+    text: PyMAPDL Documentation test
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
+      jupytext_version: 1.16.1
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
 ---
 
 # Launch PyMAPDL
@@ -17,6 +26,7 @@ execute:
 Launch a PyMAPDL instance locally and exit it:
 
 ```{python}
+#| eval: false
 # Launch an instance
 from ansys.mapdl.core import launch_mapdl
 mapdl = launch_mapdl()
@@ -27,6 +37,7 @@ mapdl.exit()
 Specify a job name, number of processors, and working directory:
 
 ```{python}
+#| eval: false
 jname = 'user_jobname'
 path = '<path of directory>'
 mapdl = launch_mapdl(
@@ -36,16 +47,23 @@ mapdl = launch_mapdl(
 Connect to an existing instance of MAPDL at IP address 192.168.1.30 and port 50001:
 
 ```{python}
+#| eval: false
 mapdl = launch_mapdl(start_instance=False,
-    ip='192.168.1.30', 50001)
+    ip='192.168.1.30', port=50001)
 ```
 
 Create and exit a pool of instances:
 
 ```{python}
+#| echo: false
+from ansys.mapdl.core import launch_mapdl
+mapdl = launch_mapdl()
+```
+
+```{python}
 # Create a pool of 10 instances
-from ansys.mapdl.core import LocalMapdlPool
-pool = mapdl.LocalMapdlPool(10)
+from ansys.mapdl.core import MapdlPool
+pool = MapdlPool(10)
 # Exit the pool
 pool.exit()
 ```
@@ -55,17 +73,20 @@ pool.exit()
 PyMAPDL commands are Python statements that act as a wrapper for APDL commands. 
 
 For example, *ESEL, s, type, 1* is translated as:
+
 ```{python}
 mapdl.esel('s', 'type', vmin=1) 
 ```
 
 Commands that start with * or / have these characters removed:
+
 ```{python}
 mapdl.prep7()	        # /PREP7
 mapdl.get()	        # *GET
 ```
 
 In cases where removing * or / causes conflicts with other commands, a prefix "slash" or "star" is added:
+
 ```{python}
 mapdl.solu()		# SOLU
 mapdl.slashsolu()	# /SOLU
@@ -75,6 +96,7 @@ mapdl.starvget()	# *VGET
 ```
 
 Convert an existing APDL script to PyMAPDL format:
+
 ```{python}
 inputfile = 'ansys_inputfile.inp'
 pyscript = 'pyscript.py'
@@ -90,6 +112,7 @@ mapdl.load_table(name, array)
 ```
 
 Access from or write parameters to the MAPDL database:
+
 ```{python}
 # Save a parameter to a NumPy array
 nparray = mapdl.parameters['displ_load']
@@ -98,6 +121,7 @@ mapdl.parameters['exp_disp'] = nparray
 ```
 
 Access information using ``*GET`` and ``*VGET`` and store it in NumPy arrays:
+
 ```{python}
 # Run *GET command and return a Python value
 mapdl.get_value(entity='NODE', item1='COUNT')
@@ -112,7 +136,9 @@ Store the finite element mesh as a VTK *UnstructuredGrid* data object:
 ```{python}
 grid = mapdl.mesh.grid
 ```
+
 Save element and node numbers to Python arrays:
+
 ```{python}
 # Get an array of the nodal coordinates
 nodes = mapdl.mesh.nodes
@@ -132,6 +158,7 @@ elem_num_all = mapdl.mesh.enum_all
 
 # Post-processing class
 The *post_processing* class is used for plotting and saving results to NumPy arrays.
+
 ```{python}
 from ansys.mapdl.core import post_processing
 mapdl.post1()
@@ -148,12 +175,12 @@ sbar_kwargs = {"color": "black",
 	       "n_labels": 6}
 post_processing.plot_nodal_eqv_stress(
     cpos='xy', background='white',
-    edge_color='black', show_edges=True,
-    scalar bar_args=sbar_kwargs, n_colors=9)
+    edge_color='black', show_edges=True,scalar bar_args=sbar_kwargs, n_colors=9)
 ```
 
 # Plotting class
 Use PyVista to interpolate data, saving the resulting stress and storing it in the underlying *UnstructuredGrid* object:
+
 ```{python}
 pl = pyvista.Plotter()
 pl0 = post_processing.plot_nodal_stress(
@@ -161,6 +188,7 @@ pl0 = post_processing.plot_nodal_stress(
 pl.add(pl0.mesh)
 pl.show()
 ```
+
 ```{python}
 # Plot currently selected elements
 mapdl.eplot(show_node_numbering, vtk)
