@@ -2,11 +2,28 @@
 .Rproj.user
 
 /.luarc.json
+/.quarto/
+
+# virtualenv
+venv/
+.venv/
+ENV/
+virtualenv/
+myenv/
+
+# notebook
+.ipynb_checkpoints/
+
+# extension files
+cheatsheet.aux
+cheatsheet.log
+cheatsheet.out
 cheatsheet.sty
 cheatsheet.tex
 cheatsheet.pdf
 slash.png
 bground.png
 ansys.png
-/.quarto/
-/_build/
+
+# output files
+_build/

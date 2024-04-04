@@ -26,7 +26,6 @@ jupyter:
 Launch a PyMAPDL instance locally and exit it:
 
 ```{python}
-#| eval: false
 # Launch an instance
 from ansys.mapdl.core import launch_mapdl
 mapdl = launch_mapdl()
@@ -61,6 +60,7 @@ mapdl = launch_mapdl()
 ```
 
 ```{python}
+#| eval: false
 # Create a pool of 10 instances
 from ansys.mapdl.core import MapdlPool
 pool = MapdlPool(10)
@@ -82,12 +82,14 @@ Commands that start with * or / have these characters removed:
 
 ```{python}
 mapdl.prep7()	        # /PREP7
+#| eval: false
 mapdl.get()	        # *GET
 ```
 
 In cases where removing * or / causes conflicts with other commands, a prefix "slash" or "star" is added:
 
 ```{python}
+#| eval: false
 mapdl.solu()		# SOLU
 mapdl.slashsolu()	# /SOLU
 
@@ -98,6 +100,7 @@ mapdl.starvget()	# *VGET
 Convert an existing APDL script to PyMAPDL format:
 
 ```{python}
+#| eval: false
 inputfile = 'ansys_inputfile.inp'
 pyscript = 'pyscript.py'
 mapdl.convert_script(inputfile, pyscript)
@@ -108,12 +111,14 @@ mapdl.convert_script(inputfile, pyscript)
 Load a table from Python to MAPDL:
 
 ```{python}
-mapdl.load_table(name, array)
+#| eval: false
+mapdl.load_table(name="abc", array=create_5d_array)
 ```
 
 Access from or write parameters to the MAPDL database:
 
 ```{python}
+#| eval: false
 # Save a parameter to a NumPy array
 nparray = mapdl.parameters['displ_load']
 # Create a parameter from a NumPy array
@@ -134,6 +139,7 @@ mapdl.get_array(entity='NODE', item1='NLIST')
 Store the finite element mesh as a VTK *UnstructuredGrid* data object:
 
 ```{python}
+#| eval: false
 grid = mapdl.mesh.grid
 ```
 
@@ -160,6 +166,7 @@ elem_num_all = mapdl.mesh.enum_all
 The *post_processing* class is used for plotting and saving results to NumPy arrays.
 
 ```{python}
+#| eval: false
 from ansys.mapdl.core import post_processing
 mapdl.post1()
 mapdl.set(1, 2)
@@ -182,6 +189,7 @@ post_processing.plot_nodal_eqv_stress(
 Use PyVista to interpolate data, saving the resulting stress and storing it in the underlying *UnstructuredGrid* object:
 
 ```{python}
+#| eval: false
 pl = pyvista.Plotter()
 pl0 = post_processing.plot_nodal_stress(
     return_plotter=True)
@@ -190,6 +198,7 @@ pl.show()
 ```
 
 ```{python}
+#| eval: false
 # Plot currently selected elements
 mapdl.eplot(show_node_numbering, vtk)
 # Plot selected volumes

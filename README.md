@@ -38,6 +38,8 @@ format: cheatsheet-pdf
 **execute**: If set to true, the code blocks will be executed and the output will be displayed in the pdf.
 ```yaml
 
+
+
 ## Example
 
 Example of a cheatsheet.qmd file is placed in the current directory.
