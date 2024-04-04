@@ -83,3 +83,10 @@ for available options.
 ## Example
 
 Example of a [cheatsheet.qmd](cheatsheet.qmd) file is placed in the current directory.
+
+> [!TIP]
+> If you want to open a `.qmd` file in Jupyter Notebook, follow these steps:
+> 1. Install `jupytext` by running the command: `pip install jupytext`
+> 2. Install `jupyter` by running the command: `pip install jupyter`
+> 3. Open the `.qmd` file in Jupyter Notebook with the command: `jupyter notebook cheatsheet.qmd`
+
