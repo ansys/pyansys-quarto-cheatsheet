@@ -8,6 +8,9 @@ footerlinks:
     text: PyMAPDL Documentation
   - urls: 'https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html'
     text: PyMAPDL Documentation test
+execute:
+    # output: false
+    eval: false 
 jupyter:
   jupytext:
     text_representation:
@@ -81,8 +84,8 @@ mapdl.esel('s', 'type', vmin=1)
 Commands that start with * or / have these characters removed:
 
 ```{python}
-mapdl.prep7()	        # /PREP7
 #| eval: false
+mapdl.prep7()	        # /PREP7
 mapdl.get()	        # *GET
 ```
 
@@ -182,7 +185,8 @@ sbar_kwargs = {"color": "black",
 	       "n_labels": 6}
 post_processing.plot_nodal_eqv_stress(
     cpos='xy', background='white',
-    edge_color='black', show_edges=True,scalar bar_args=sbar_kwargs, n_colors=9)
+    edge_color='black', show_edges=True,
+    scalar bar_args=sbar_kwargs, n_colors=9)
 ```
 
 # Plotting class
@@ -219,3 +223,9 @@ mapdl.lplot(vtk=False)
 - [Getting Started](https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html)
 - [MAPDL commands](https://mapdl.docs.pyansys.com/version/stable/mapdl_commands/index.html)
 - [API reference](https://mapdl.docs.pyansys.com/version/stable/api/index.html)
+
+
+```{python}
+#| echo: false
+mapdl.exit()
+```
