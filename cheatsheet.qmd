@@ -10,7 +10,7 @@ footerlinks:
     text: PyMAPDL Documentation test
 execute:
     # output: false
-    eval: false 
+    eval: false
 jupyter:
   jupytext:
     text_representation:
@@ -73,12 +73,12 @@ pool.exit()
 
 # PyMAPDL commands
 
-PyMAPDL commands are Python statements that act as a wrapper for APDL commands. 
+PyMAPDL commands are Python statements that act as a wrapper for APDL commands.
 
 For example, *ESEL, s, type, 1* is translated as:
 
 ```{python}
-mapdl.esel('s', 'type', vmin=1) 
+mapdl.esel('s', 'type', vmin=1)
 ```
 
 Commands that start with * or / have these characters removed:
@@ -157,10 +157,10 @@ node_num = mapdl.mesh.nnum
 # Save node numbers of all nodes to an array
 node_num_all = mapdl.mesh.nnum_all
 
-# Get element numbers of currently 
+# Get element numbers of currently
 # selected elements
 elem_num = mapdl.mesh.enum
-# Get all element numbers, including 
+# Get all element numbers, including
 # those not selected
 elem_num_all = mapdl.mesh.enum_all
 ```
@@ -209,10 +209,10 @@ mapdl.eplot(show_node_numbering, vtk)
 mapdl.vplot(nv1, nv2, ninc, degen, scale, ...)
 # Display selected areas
 mapdl.aplot(na1, na2, ninc, degen, scale, ...)
-# Display selected lines without MAPDL 
+# Display selected lines without MAPDL
 # plot symbols
 mapdl.lplot(vtk=True, cpos='xy', line_width=10)
-# Save PNG file of line plot with MAPDL 
+# Save PNG file of line plot with MAPDL
 # coordinate symbol
 mapdl.psymb('CS', 1)
 mapdl.lplot(vtk=False)

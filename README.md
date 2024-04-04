@@ -6,7 +6,7 @@
 ```bash
 quarto use ansys-internal/pyansys-quarto-cheatsheet
 ```
-This command installs the extension and generates an example `.qmd` file that 
+This command installs the extension and generates an example `.qmd` file that
 serves as a starting point for your article.
 
 ## Usage
@@ -40,13 +40,13 @@ footerlinks:
 format: cheatsheet-pdf
 ```
 - **execute**: Controls the code output in the code cell. Refer to the
-[quarto documentation](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output) 
+[quarto documentation](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
 for available options.
 
   - *eval*: If set to `false`, the code will not be executed.
     ```yaml
     execute:
-      eval: false 
+      eval: false
     ```
   - *echo*: If set to `false`, the code will not be displayed in the output.
     ```yaml
@@ -62,10 +62,10 @@ for available options.
 > [!NOTE]
 > By default, code cells are executed. To disable execution, use the `execute` option.
 >
-> To disable execution and display of individual or multiple code cells, 
+> To disable execution and display of individual or multiple code cells,
 > utilize the `execute` option within the code cell.
 >  ```
-> #| eval: false	
+> #| eval: false
 >
 > #| echo: false
 >  ```
@@ -73,5 +73,3 @@ for available options.
 ## Example
 
 Example of a `cheatsheet.qmd` file is placed in the current directory.
-
-

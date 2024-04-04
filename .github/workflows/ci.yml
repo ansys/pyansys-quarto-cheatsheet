@@ -14,11 +14,11 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
@@ -37,7 +37,7 @@ jobs:
         run: |
           quarto install extension . --no-prompt
           python3 -m pip install jupyter
-        
+
       - name: Render book
         run: |
           quarto render cheatsheet.qmd --to cheatsheet-pdf
