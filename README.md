@@ -1,4 +1,4 @@
-# PyAnsys quarto chetsheet format
+# PyAnsys quarto cheatsheet format
 
 
 ## Installation
