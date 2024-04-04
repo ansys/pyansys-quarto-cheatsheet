@@ -4,10 +4,10 @@ format: cheatsheet-pdf
 version: 0.1.0
 footer: Getting started with PyMAPDL
 footerlinks:
-  - urls: 'https://mapdl-docs.pyansys.com/version/stable/'
+  - urls: 'https://mapdl.docs.pyansys.com/version/stable/'
     text: PyMAPDL Documentation
-  - urls: 'https://mapdl-docs.pyansys.com/mapdl_0.1.0/getting_started/getting_started.html'
-    text: PyMAPDL Documentation test
+  - urls: 'https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html'
+    text: PyMAPDL Documentation getting started
 execute:
     # output: false
     eval: false
