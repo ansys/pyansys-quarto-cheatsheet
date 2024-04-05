@@ -50,8 +50,8 @@ jobs:
 
       - name: Create archive
         run: |
-          zip -r cheatsheet_zip.zip .
-          tar -czvf cheatsheet_tar.tar.gz .
+          zip -r cheatsheet_zip.zip _extensions
+          tar -czvf cheatsheet_tar.tar.gz _extensions
 
       - name: List files
         run: |
