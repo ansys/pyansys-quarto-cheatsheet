@@ -50,8 +50,8 @@ jobs:
 
       - name: Create archive
         run: |
-          zip -r cheatsheet_zip.zip _extensions
-          tar -czvf cheatsheet_tar.tar.gz _extensions
+          zip -r cheatsheet.zip _extensions
+          tar -czvf cheatsheet.tar.gz _extensions
 
       - name: List files
         run: |
@@ -61,8 +61,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: |
-            cheatsheet_zip.zip
-            cheatsheet_tar.tar.gz
+            cheatsheet.zip
+            cheatsheet.tar.gz
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -80,7 +80,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          quarto add cheatsheet_tar.tar.gz --no-prompt
+          quarto add cheatsheet.tar.gz --no-prompt
           python3 -m pip install jupyter
 
       - name: Render book
@@ -106,6 +106,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            cheatsheet_zip.zip
-            cheatsheet_tar.tar.gz
+            cheatsheet.zip
+            cheatsheet.tar.gz
           token: ${{ secrets.GITHUB_TOKEN }}

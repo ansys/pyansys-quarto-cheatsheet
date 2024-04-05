@@ -3,11 +3,40 @@
 
 ## Installation
 
+### Install Quarto
+To use this extension, you must have [Quarto](https://quarto.org/docs/getting-started/installation.html) installed.
+
+### Install the extension
+
+**From the github repository:**
+
+From main branch:
+
 ```bash
-quarto use ansys-internal/pyansys-quarto-cheatsheet
+quarto use ansys-internal/pyansys-quarto-cheatsheet@main
 ```
-This command installs the extension and generates an example `.qmd` file that
-serves as a starting point for your article.
+
+From a specific release:
+
+```bash
+quarto use ansys-internal/pyansys-quarto-cheatsheet@0.1.0
+```
+
+**From the archive file:**
+
+Download the cheatsheet.zip or cheatsheet.tar.gz file from the
+[releases page](https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases) and run the following command:
+
+```bash
+quarto use cheatsheet.zip
+```
+or
+```bash
+quarto use cheatsheet.tar.gz
+```
+
+This command installs the extension in the quarto environment and creates
+a ``_extensions`` directory in the current directory containing the extension files.
 
 ## Usage
 
