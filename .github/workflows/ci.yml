@@ -69,5 +69,7 @@ jobs:
       - name: Publish
         # if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          path: cheatsheet.qmd
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
