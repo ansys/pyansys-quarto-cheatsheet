@@ -36,9 +36,9 @@ jobs:
         run: |
           pre-commit run --all-files --show-diff-on-failure
 
-  create_archives:
+  create-archives:
     runs-on: ubuntu-latest
-    needs: build-deploy
+    needs: code-style
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -60,18 +60,9 @@ jobs:
       - name: Upload archive
         uses: actions/upload-artifact@v4
         with:
-          name: artifacts
           path: |
             cheatsheet_zip.zip
             cheatsheet_tar.tar.gz
-
-
-  build-deploy:
-    runs-on: ubuntu-latest
-    needs: code-style
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
@@ -89,14 +80,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          quarto install extension . --no-prompt
+          quarto add cheatsheet_tar.tar.gz --no-prompt
           python3 -m pip install jupyter
 
       - name: Render book
         run: |
           quarto render cheatsheet.qmd --to cheatsheet-pdf
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -105,7 +97,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
-    needs: create_archives
+    needs: create-archives
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
