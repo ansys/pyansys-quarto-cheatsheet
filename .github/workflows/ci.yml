@@ -1,6 +1,8 @@
 on:
   pull_request:
   push:
+    tags:
+      - "v*.*.*"
     branches:
       - main
 
@@ -93,3 +95,19 @@ jobs:
         with:
           name: cheatsheet
           path: cheatsheet_zip.zip cheatsheet_tar.tar.gz
+
+  release:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    needs: create_archives
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Relase to github
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            cheatsheet_zip.zip
+            cheatsheet_tar.tar.gz
+          token: ${{ secrets.GITHUB_TOKEN }}
