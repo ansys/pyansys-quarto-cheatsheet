@@ -19,7 +19,7 @@ quarto use ansys-internal/pyansys-quarto-cheatsheet@main
 From a specific release:
 
 ```bash
-quarto use ansys-internal/pyansys-quarto-cheatsheet@0.1.0
+quarto use ansys-internal/pyansys-quarto-cheatsheet@v0.1.0
 ```
 
 **From the archive file:**
