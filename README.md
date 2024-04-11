@@ -1,4 +1,4 @@
-# PyAnsys quarto cheatsheet format
+# PyAnsys quarto cheat sheet format
 
 
 ## Installation
@@ -24,15 +24,15 @@ quarto use ansys-internal/pyansys-quarto-cheatsheet@v0.1.0
 
 **From the archive file:**
 
-Download the cheatsheet.zip or cheatsheet.tar.gz file from the
+Download the cheat_sheet.zip or cheat_sheet.tar.gz file from the
 [releases page](https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases) and run the following command:
 
 ```bash
-quarto use cheatsheet.zip
+quarto use cheat_sheet.zip
 ```
 or
 ```bash
-quarto use cheatsheet.tar.gz
+quarto use cheat_sheet.tar.gz
 ```
 
 This command installs the extension in the quarto environment and creates
@@ -41,21 +41,21 @@ a ``_extensions`` directory in the current directory containing the extension fi
 ## Usage
 
 ```bash
-quarto render cheatsheet.qmd --to cheatsheet-pdf
+quarto render cheat_sheet.qmd --to cheat_sheet-pdf
 ```
 ## Format options
 
-- **version**: Specifies the version of the cheatsheet.
+- **version**: Specifies the version of the cheat sheet.
 ```yaml
 version: 0.1
 ```
-- **title**: Sets the title of the cheatsheet.
+- **title**: Sets the title of the cheat sheet.
 ```yaml
-title: PyMAPDL Cheatsheet
+title: PyMAPDL cheat sheet
 ```
 - **footer**: Defines the footer text.
 ```yaml
-footer: PyMAPDL Cheatsheet
+footer: PyMAPDL cheat sheet
 ```
 - **footerlinks**:  Specifies a list of links to display in the footer.
 Each link should have a ``url`` and ``text``.
@@ -64,9 +64,9 @@ footerlinks:
 - urls: https://mapdl-docs.pyansys.com/version/stable/
   text: PyMAPDL Documentation
 ```
-- **format**: Determines the format of the cheatsheet. For PDF generation, use  `cheatsheet-pdf`.
+- **format**: Determines the format of the cheat sheet. For PDF generation, use  `cheat_sheet-pdf`.
 ```yaml
-format: cheatsheet-pdf
+format: cheat_sheet-pdf
 ```
 - **execute**: Controls the code output in the code cell. Refer to the
 [quarto documentation](https://quarto.org/docs/reference/cells/cells-knitr.html#code-output)
@@ -122,14 +122,14 @@ example of [``_quarto.yml``](_quarto.yml) file is placed in the current director
 
 ## Example
 
-Example of a [cheatsheet.qmd](cheatsheet.qmd) file is placed in the current directory.
-Example of complete cheatsheet for pymapdl is placed in [pymapdl cheatsheet](examples/pymapdl_cheatsheet_example.qmd) file.
-To render the pymapdl example cheatsheet, run the following command:
+Example of a [cheat_sheet.qmd](cheat_sheet.qmd) file is placed in the current directory.
+Example of complete cheat sheet for pymapdl is placed in [pymapdl cheat sheet](examples/pymapdl_cheat sheet_example.qmd) file.
+To render the pymapdl example cheat sheet, run the following command:
 ```bash
-quarto render examples/pymapdl_cheatsheet_example.qmd
+quarto render examples/pymapdl_cheat_sheet_example.qmd
 ```
 > [!TIP]
 > If you want to open a `.qmd` file in Jupyter Notebook, follow these steps:
 > 1. Install `jupytext` by running the command: `pip install jupytext`
 > 2. Install `jupyter` by running the command: `pip install jupyter`
-> 3. Open the `.qmd` file in Jupyter Notebook with the command: `jupyter notebook cheatsheet.qmd`
+> 3. Open the `.qmd` file in Jupyter Notebook with the command: `jupyter notebook cheat_sheet.qmd`

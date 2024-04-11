@@ -15,15 +15,13 @@ myenv/
 .ipynb_checkpoints/
 
 # extension files
-cheatsheet.aux
-cheatsheet.log
-cheatsheet.out
-cheatsheet.sty
-cheatsheet.tex
-cheatsheet.pdf
-slash.png
-bground.png
-ansys.png
+cheat_sheet.aux
+cheat_sheet.log
+cheat_sheet.out
+cheat_sheet.sty
+cheat_sheet.tex
+cheat_sheet.pdf
+
 
 # output files
 _build/
