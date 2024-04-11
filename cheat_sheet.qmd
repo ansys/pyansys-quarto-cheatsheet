@@ -1,6 +1,6 @@
 ---
 title: Your title here
-format: cheatsheet-pdf
+format: cheat_sheet-pdf
 version: Your version here
 footer: Your footer here
 footerlinks:
@@ -114,7 +114,7 @@ print("Hello World!")
 - Bullet list
 - Bullet list
 
-![image](./_extensions/cheatsheet/ansys.png)
+![image](./_extensions/cheat_sheet/ansys.png)
 
 ## Subsection
 

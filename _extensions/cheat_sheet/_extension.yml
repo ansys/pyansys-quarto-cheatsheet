@@ -1,4 +1,4 @@
-title: cheatsheet
+title: cheat sheet
 version: 0.1.0
 contributes:
   formats:
@@ -26,7 +26,7 @@ contributes:
           \usepackage[utf8]{inputenc}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
-        - cheatsheet.sty
+        - cheat_sheet.sty
         - ansys.png
         - bground.png
         - slash.png
