@@ -24,15 +24,15 @@ quarto use ansys-internal/pyansys-quarto-cheatsheet@0.1.0
 
 **From the archive file:**
 
-Download the cheatsheet.zip or cheatsheet.tar.gz file from the
+Download the cheat_sheet.zip or cheat_sheet.tar.gz file from the
 [releases page](https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases) and run the following command:
 
 ```bash
-quarto use cheatsheet.zip
+quarto use cheat_sheet.zip
 ```
 or
 ```bash
-quarto use cheatsheet.tar.gz
+quarto use cheat_sheet.tar.gz
 ```
 
 This command installs the extension in the quarto environment and creates
