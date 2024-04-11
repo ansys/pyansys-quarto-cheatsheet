@@ -27,8 +27,6 @@ contributes:
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - cheat_sheet.sty
-        - ansys.png
-        - bground.png
-        - slash.png
+        - _static
       cache: false
       resource-path: ["_output"]

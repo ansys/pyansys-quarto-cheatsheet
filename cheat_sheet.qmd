@@ -114,7 +114,7 @@ print("Hello World!")
 - Bullet list
 - Bullet list
 
-![image](./_extensions/cheat_sheet/ansys.png)
+![image](./_extensions/cheat_sheet/_static/ansys.png)
 
 ## Subsection
 
