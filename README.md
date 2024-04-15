@@ -41,7 +41,7 @@ a ``_extensions`` directory in the current directory containing the extension fi
 ## Usage
 
 ```bash
-quarto render cheat_sheet.qmd --to cheat_sheet-pdf
+quarto render examples/cheat_sheet.qmd --to cheat_sheet-pdf
 ```
 ## Format options
 
