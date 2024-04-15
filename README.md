@@ -87,6 +87,22 @@ for available options.
     execute:
       output: false
     ```
+### Example of a cheat sheet configuration file
+
+```yaml
+version: 0.1
+title: PyMAPDL cheat sheet
+footer: PyMAPDL cheat sheet
+footerlinks:
+- urls: https://mapdl-docs.pyansys.com/version/stable/
+  text: PyMAPDL Documentation
+format: cheat_sheet-pdf
+execute:
+  eval: false
+  echo: false
+  output: false
+```
+
 
 > [!NOTE]
 > By default, code cells are executed. To disable execution, use the `execute` option.
