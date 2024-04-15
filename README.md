@@ -123,7 +123,7 @@ example of [``_quarto.yml``](_quarto.yml) file is placed in the current director
 ## Example
 
 Example of a [cheat_sheet.qmd](cheat_sheet.qmd) file is placed in the current directory.
-Example of complete cheat sheet for pymapdl is placed in [pymapdl cheat sheet](examples/pymapdl_cheat sheet_example.qmd) file.
+Example of complete cheat sheet for pymapdl is placed in [pymapdl cheat sheet](examples/pymapdl_cheatsheet_example.qmd) file.
 To render the pymapdl example cheat sheet, run the following command:
 ```bash
 quarto render examples/pymapdl_cheat_sheet_example.qmd
