@@ -21,9 +21,6 @@ examples/cheat_sheet.out
 examples/cheat_sheet.sty
 examples/cheat_sheet.tex
 examples/cheat_sheet.pdf
-examples/ansys.png
-examples/bground.png
-examples/slash.png
-
+examples/*.png
 # output files
 _build/
