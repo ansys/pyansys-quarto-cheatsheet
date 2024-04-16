@@ -9,10 +9,6 @@ from ansys_sphinx_theme import (
     get_version_match,
     pyansys_logo_black,
 )
-from sphinx.builders.latex import LaTeXBuilder
-
-LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
-
 # Project information
 project = "pyansys-quarto-cheat-sheet"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
