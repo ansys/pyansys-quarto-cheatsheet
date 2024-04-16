@@ -3,7 +3,6 @@
 
 ## Installation
 
-### Install Quarto
 To use this extension, you must have [Quarto](https://quarto.org/docs/getting-started/installation.html) installed.
 
 ### Install the extension

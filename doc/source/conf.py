@@ -2,6 +2,7 @@
 
 from datetime import datetime
 import os
+import pathlib
 
 from ansys_sphinx_theme import (
     ansys_favicon,
@@ -10,14 +11,16 @@ from ansys_sphinx_theme import (
 )
 from sphinx.builders.latex import LaTeXBuilder
 
-from ansys.urlinclude import __version__
-
 LaTeXBuilder.supported_image_types = ["image/png", "image/pdf", "image/svg+xml"]
 
 # Project information
 project = "pyansys-quarto-cheat-sheet"
 copyright = f"(c) {datetime.now().year} ANSYS, Inc. All rights reserved"
 author = "ANSYS, Inc."
+source_dir = pathlib.Path(__file__).parent.resolve().absolute()
+version_file = source_dir / "../../VERSION"
+with open(str(version_file), "r") as file:
+    __version__ = file.read().splitlines()[0]
 release = version = __version__
 cname = os.getenv("DOCUMENTATION_CNAME", "curly-adventure-yr7kw1w.pages.github.io")
 

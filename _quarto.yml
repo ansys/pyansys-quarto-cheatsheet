@@ -1,2 +1,2 @@
-latex-output-dir: _build
+latex-output-dir: doc/source/_static
 latex-clean: true
