@@ -22,7 +22,7 @@ version_file = source_dir / "../../VERSION"
 with open(str(version_file), "r") as file:
     __version__ = file.read().splitlines()[0]
 release = version = __version__
-cname = os.getenv("DOCUMENTATION_CNAME", "curly-adventure-yr7kw1w.pages.github.io")
+cname = os.getenv("DOCUMENTATION_CNAME", "quarto-cheat-sheet.docs.pyansys.com")
 
 # Select desired logo, theme, and declare the html title
 html_logo = pyansys_logo_black
@@ -53,9 +53,6 @@ extensions = [
 
 # static path
 html_static_path = ["_static"]
-
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
 
 # The suffix(es) of source filenames.
 source_suffix = {

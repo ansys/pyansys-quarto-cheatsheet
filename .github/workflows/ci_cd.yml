@@ -8,6 +8,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.11'
+  DOCUMENTATION_CNAME: 'quarto-cheat-sheet.docs.pyansys.com'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -17,7 +18,6 @@ concurrency:
 name: CI
 
 jobs:
-
   code-style:
     name: "Code style"
     runs-on: ubuntu-latest
@@ -39,87 +39,93 @@ jobs:
           vale-version: "3.3.0"
 
   create-archives:
+    name: "Create archives and build documentation"
     runs-on: ubuntu-latest
     needs: [code-style, doc-style]
     steps:
-      - name: Check out repository
+      - name: "Check out repository"
         uses: actions/checkout@v4
 
-      - name: Install required packages
+      - name: "Install zip, gzip, tar"
         run: |
           sudo apt-get update
           sudo apt-get install zip gzip tar -y
 
-      - name: Create archive
+      - name: "Create archives"
         run: |
           zip -r cheat_sheet.zip _extensions
           tar -czvf cheat_sheet.tar.gz _extensions
 
-      - name: List files
+      - name: "List files in directory"
         run: |
           ls -l
 
-      - name: Upload archive
+      - name: "Upload artifacts"
         uses: actions/upload-artifact@v4
         with:
           path: |
             cheat_sheet.zip
             cheat_sheet.tar.gz
 
-      - name: Set up Quarto
+      - name: "Set up Quarto"
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
 
-      - name: Check Quarto version
+      - name: "Check Quarto version"
         run: |
           quarto --version
 
-      - name: Setup Python
+      - name: "Set up Python"
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
-      - name: Install dependencies
+      - name: "Install dependencies"
         run: |
           quarto add cheat_sheet.tar.gz --no-prompt
           python3 -m pip install jupyter
           python3 -m pip install -r requirements/requirements_doc.txt
 
-      - name: Build html documentation
+      - name: "Build documentation"
         run: |
           make -C doc html
 
-      - name: Render book
+      - name: "Render cheat sheet"
         run: |
           quarto render examples/cheat_sheet.qmd --to cheat_sheet-pdf
 
-      - name: move pdf to _build/html/_static
+      - name: "Move pdf to documentation"
         run: |
           mv _build/cheat_sheet.pdf doc/_build/html/_static
 
-      - name: Upload HTML documentation
+      - name: "Upload documentation artifacts"
         uses: actions/upload-artifact@v4
         with:
-          name: documentation-pdf
+          name: documentation-html
           path: doc/_build/html
 
-      # - name: Deploy to GitHub Pages
-      #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./_build
+  doc-deploy-dev:
+    name: "Deploy developers documentation"
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && !contains(github.ref, 'refs/tags')
+    needs: [create-archives]
+    steps:
+      - uses: ansys/actions/doc-deploy-dev@main
+        with:
+            cname: ${{ env.DOCUMENTATION_CNAME }}
+            token: ${{ secrets.GITHUB_TOKEN }}
 
   release:
+    name: "Release to github"
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     needs: create-archives
     steps:
-      - name: Check out repository
+      - name: "Check out repository"
         uses: actions/checkout@v4
 
-      - name: Relase to github
+      - name: "Create release"
         uses: softprops/action-gh-release@v2
         with:
           files: |
@@ -127,3 +133,14 @@ jobs:
             cheat_sheet.tar.gz
           token: ${{ secrets.GITHUB_TOKEN }}
           generate_release_notes: true
+
+  doc-deploy-stable:
+    name: "Deploy stable documentation"
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
+    needs: release
+    steps:
+      - uses: ansys/actions/doc-deploy-stable@main
+        with:
+            cname: ${{ env.DOCUMENTATION_CNAME }}
+            token: ${{ secrets.GITHUB_TOKEN }}

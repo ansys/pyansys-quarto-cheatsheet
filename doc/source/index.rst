@@ -22,7 +22,7 @@ It is a collection of useful commands and tips for using the `pyansys-quarto-che
 
 
 .. toctree::
-    :maxdepth: 2
+    :hidden:
 
     getting-started
     examples
