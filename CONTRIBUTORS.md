@@ -6,5 +6,6 @@
 
 ## Individual Contributors
 
+* [Jorge Martínez](https://github.com/jorgepiloto)
 * [Maxime Rey](https://github.com/MaxJPRey)
 * [Roberto Pastor](https://github.com/RobPasMue)
