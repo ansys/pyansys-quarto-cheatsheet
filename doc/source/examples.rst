@@ -18,5 +18,6 @@ To see
 
 .. button-link:: _static/cheat_sheet.pdf
     :ref-type: ref
+    :shadow:
 
     Rendered pdf
