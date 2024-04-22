@@ -127,11 +127,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: "Download artifacts"
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
 
       - name: "List files in directory"
         run: |
           ls -l
+
+      - name: "compress documentation"
+        uses: vimtot/action-zip@v1.2
+        with:
+          files: documentation-html
+          dest: documentation-html.zip
 
       - name: "Create release"
         uses: softprops/action-gh-release@v2
@@ -139,7 +145,7 @@ jobs:
           files: |
             cheat_sheet.zip
             cheat_sheet.tar.gz
-            documentation-html
+            documentation-html.zip
           token: ${{ secrets.GITHUB_TOKEN }}
           generate_release_notes: true
 
