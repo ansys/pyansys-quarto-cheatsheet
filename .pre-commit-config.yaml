@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v4.6.0
   hooks:
     - id: check-yaml
     - id: trailing-whitespace
@@ -9,6 +9,14 @@ repos:
 
 # this validates our github workflow files
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: 0.28.0
+  rev: 0.28.2
   hooks:
     - id: check-github-workflows
+
+- repo: https://github.com/ansys/pre-commit-hooks
+  rev: v0.2.9
+  hooks:
+    - id: add-license-headers
+      files: '(_extensions)/.*\.(yml|sty|tex)'
+      args:
+      - --start_year=2024

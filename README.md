@@ -3,7 +3,6 @@
 
 ## Installation
 
-### Install Quarto
 To use this extension, you must have [Quarto](https://quarto.org/docs/getting-started/installation.html) installed.
 
 ### Install the extension
@@ -41,7 +40,7 @@ a ``_extensions`` directory in the current directory containing the extension fi
 ## Usage
 
 ```bash
-quarto render cheat_sheet.qmd --to cheat_sheet-pdf
+quarto render examples/cheat_sheet.qmd --to cheat_sheet-pdf
 ```
 ## Format options
 
@@ -61,7 +60,7 @@ footer: PyMAPDL cheat sheet
 Each link should have a ``url`` and ``text``.
 ```yaml
 footerlinks:
-- urls: https://mapdl-docs.pyansys.com/version/stable/
+- urls: https://mapdl.docs.pyansys.com/version/stable/
   text: PyMAPDL Documentation
 ```
 - **format**: Determines the format of the cheat sheet. For PDF generation, use  `cheat_sheet-pdf`.
@@ -87,6 +86,22 @@ for available options.
     execute:
       output: false
     ```
+### Example of a cheat sheet configuration file
+
+```yaml
+version: 0.1
+title: PyMAPDL cheat sheet
+footer: PyMAPDL cheat sheet
+footerlinks:
+- urls: https://mapdl.docs.pyansys.com/version/stable/
+  text: PyMAPDL Documentation
+format: cheat_sheet-pdf
+execute:
+  eval: false
+  echo: false
+  output: false
+```
+
 
 > [!NOTE]
 > By default, code cells are executed. To disable execution, use the `execute` option.
@@ -123,7 +138,7 @@ example of [``_quarto.yml``](_quarto.yml) file is placed in the current director
 ## Example
 
 Example of a [cheat_sheet.qmd](cheat_sheet.qmd) file is placed in the current directory.
-Example of complete cheat sheet for pymapdl is placed in [pymapdl cheat sheet](examples/pymapdl_cheat sheet_example.qmd) file.
+Example of complete cheat sheet for pymapdl is placed in [pymapdl cheat sheet](examples/pymapdl_cheat_sheet_example.qmd) file.
 To render the pymapdl example cheat sheet, run the following command:
 ```bash
 quarto render examples/pymapdl_cheat_sheet_example.qmd

@@ -1,0 +1,4 @@
+ansys-sphinx-theme==0.15.2
+sphinx==7.2.6
+myst-parser==2.0.0
+sphinx_design==0.5.0
