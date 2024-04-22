@@ -10,7 +10,7 @@ Getting started and basic usage
 .. note::
 
     By default, code cells are executed. To disable execution, use the `execute` option.
-    To disable execution and display of individual or multiple code cells, utilize the `execute` option within the code cell.
+    To turn off execution and display of individual or multiple code cells, utilize the `execute` option within the code cell.
 
     .. code-block:: python
         :linenos:
@@ -20,7 +20,7 @@ Getting started and basic usage
 
 .. important::
 
-    The output of the code cell is displayed by default. To disable the output, use the `execute` option.
+    The output of the code cell is displayed by default. To turn off the output, use the `execute` option.
 
     To disable the output of individual or multiple code cells,
     utilize the `output` option within the code cell.

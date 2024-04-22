@@ -1,12 +1,4 @@
-ANSYS
-Ansys
-ansys
-library_name
-libarary_url
-docs_cname
-[Uu][Rr][Ll]
-[Jj]inja
-endfor
-endmacro
-[Ss]phinx
-[Bb]ool
+(?!)ansys
+linenos
+eval
+disable

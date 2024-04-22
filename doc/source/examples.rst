@@ -17,7 +17,7 @@ To render the cheat sheet, run the following command:
 Output
 ------
 
-The rendered cheat sheet will be saved as ``cheat_sheet.pdf`` in the same directory as the input file.
+The rendered cheat sheet is saved as ``cheat_sheet.pdf`` in the same directory as the input file.
 
 The rendered cheat sheet can be downloaded by clicking the link below:
 
