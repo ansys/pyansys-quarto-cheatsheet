@@ -105,13 +105,6 @@ jobs:
           name: documentation-html
           path: doc/_build/html
 
-      - name: "Download all artifacts"
-        uses: actions/download-artifact@v4
-
-      - name: "List files in directory"
-        run: |
-          ls -l
-
 
   doc-deploy-dev:
     name: "Deploy developers documentation"
@@ -133,12 +126,20 @@ jobs:
       - name: "Check out repository"
         uses: actions/checkout@v4
 
+      - name: "Download artifacts"
+        uses: actions/download-artifact@v2
+
+      - name: "List files in directory"
+        run: |
+          ls -l
+
       - name: "Create release"
         uses: softprops/action-gh-release@v2
         with:
           files: |
             cheat_sheet.zip
             cheat_sheet.tar.gz
+            documentation-html
           token: ${{ secrets.GITHUB_TOKEN }}
           generate_release_notes: true
 
