@@ -97,7 +97,7 @@ jobs:
 
       - name: "Move pdf to documentation"
         run: |
-          mv _build/cheat_sheet.pdf doc/_build/html/_static
+          mv examples/_build/cheat_sheet.pdf doc/_build/html/_static
 
       - name: "Upload documentation artifacts"
         uses: actions/upload-artifact@v4
