@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Run code style checks"
-        uses: ansys/actions/code-style@v5.1
+        uses: ansys/actions/code-style@v6
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           use-python-cache: false
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Run documentation style checks"
-        uses: ansys/actions/doc-style@v5.1
+        uses: ansys/actions/doc-style@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           vale-version: "3.3.0"
@@ -111,7 +111,7 @@ jobs:
     if: github.event_name == 'push' && !contains(github.ref, 'refs/tags')
     needs: [create-archives]
     steps:
-      - uses: ansys/actions/doc-deploy-dev@main
+      - uses: ansys/actions/doc-deploy-dev@v6
         with:
             cname: ${{ env.DOCUMENTATION_CNAME }}
             token: ${{ secrets.GITHUB_TOKEN }}
@@ -140,7 +140,7 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     needs: release
     steps:
-      - uses: ansys/actions/doc-deploy-stable@main
+      - uses: ansys/actions/doc-deploy-stable@v6
         with:
             cname: ${{ env.DOCUMENTATION_CNAME }}
             token: ${{ secrets.GITHUB_TOKEN }}
