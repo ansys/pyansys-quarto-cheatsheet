@@ -105,6 +105,14 @@ jobs:
           name: documentation-html
           path: doc/_build/html
 
+      - name: "Download all artifacts"
+        uses: actions/download-artifact@v4
+
+      - name: "List files in directory"
+        run: |
+          ls -l
+
+
   doc-deploy-dev:
     name: "Deploy developers documentation"
     runs-on: ubuntu-latest
