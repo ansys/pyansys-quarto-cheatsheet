@@ -1,8 +1,9 @@
-PyAnsys quarto cheat sheet
-==========================
+PyAnsys Quarto Cheat Sheet documentation |version|
+==================================================
 
-This is a quick reference guide for the `pyansys-quarto-cheat-sheet` package.
-It is a collection of useful commands and tips for using the `pyansys-quarto-cheat-sheet` package.
+PyAnsys Quarto Cheat Sheet is an extension for using [Quarto](https://quarto.org/), an open
+source scientific and technical publishing system, to generate cheat sheets from plain text
+markdown.
 
 .. grid:: 1 2 2 2
     :gutter: 3 3 4 4
@@ -12,17 +13,26 @@ It is a collection of useful commands and tips for using the `pyansys-quarto-che
         :link: getting-started
         :link-type: doc
 
-        How to install and import the package and basic usage.
+        Learn how to install PyAnsys Quarto Cheat Sheet.
+
+   .. grid-item-card:: User guide :fa:`book-open-reader`
+        :link: user-guide
+        :link-type: doc
+
+        Understand how to use PyAnsys Quarto Cheat Sheet to generate
+        cheat sheets.
 
     .. grid-item-card:: Examples :fa:`code`
         :link: examples
         :link-type: doc
 
-        Examples of how to use the package.
+        Explore examples that show how to use PyAnsys Quarto Cheat Sheet to
+        generate cheat sheets.
 
 
 .. toctree::
     :hidden:
 
     getting-started
+    user-guide
     examples

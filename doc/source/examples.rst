@@ -1,13 +1,13 @@
 Examples
 ========
 
-The following example is a simple ``.qmd`` file that uses the ``pyansys-quarto-cheat-sheet``
-package to create a cheat sheet for the PyAnsys module.
+The following example is a simple ``.qmd`` file that uses PyAnsys Quarto Cheat Sheet
+to render a cheat sheet for a PyAnsys module.
 
 .. literalinclude:: ../../examples/cheat_sheet.qmd
     :language: md
 
-To render the cheat sheet, run the following command:
+To render the cheat sheet, run this command:
 
 .. code-block:: bash
 
@@ -19,11 +19,11 @@ Output
 
 The rendered cheat sheet is saved as ``cheat_sheet.pdf`` in the same directory as the input file.
 
-The rendered cheat sheet can be downloaded by clicking the link below:
+You can download the rendered cheat sheet by clicking the following link:
 
 .. button-link:: _static/cheat_sheet.pdf
     :ref-type: ref
     :color: info
     :align: center
 
-    Rendered pdf :octicon:`download;1em`
+    Rendered PDF :octicon:`download;1em`
