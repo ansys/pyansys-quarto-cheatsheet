@@ -1,13 +1,13 @@
 ---
-title: PyMAPDL Cheat sheet
+title: PyMAPDL cheat sheet
 format: cheatsheet-pdf
 version: 0.1.0
 footer: Getting started with PyMAPDL
 footerlinks:
   - urls: 'https://mapdl.docs.pyansys.com/version/stable/'
-    text: PyMAPDL Documentation
+    text: PyMAPDL documentation
   - urls: 'https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html'
-    text: PyMAPDL Documentation getting started
+    text: PyMAPDL documentation - Getting started
 execute:
     # output: false
     eval: false
@@ -220,7 +220,7 @@ mapdl.lplot(vtk=False)
 
 ## References from PyMAPDL documentation
 
-- [Getting Started](https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html)
+- [Getting started](https://mapdl.docs.pyansys.com/version/stable/getting_started/index.html)
 - [MAPDL commands](https://mapdl.docs.pyansys.com/version/stable/mapdl_commands/index.html)
 - [API reference](https://mapdl.docs.pyansys.com/version/stable/api/index.html)
 

@@ -8,9 +8,9 @@ footerlinks:
     text: Your text here
   - urls: Your URL here
     text: Your text here
-# uncommment the following line to not to evaluate code cells
+# Uncommment the following line to not evaluate code cells
 # execute:
-#     eval: false # Set to true to execute code cells
+#     eval: false # Set to true to evaluate code cells
 jupyter:
   jupytext:
     text_representation:
@@ -26,7 +26,7 @@ jupyter:
 
 # General section
 
-Discription of the first section goes here.
+Description of the first section goes here.
 
 ```{python}
 import os
@@ -34,32 +34,32 @@ import os
 
 # Section with code output
 
-Discription of the second section goes here.
+Description of the second section goes here.
 
 ```{python}
-print("Hello World!")
+print("Hello, world!")
 ```
 
-# Section without code output
+# Section with code evaluation but no results included
 
-This section will be evaluated but the output will not be displayed.
+This section is evaluated but execution results are not included in the output.
 ```{python}
 #| output: false
-print("Hello World!")
+print("Hello, world!")
 ```
 
-# Section with code evaluation without output
+# Section with code evaluation but no results included
 
-This section will be evaluated but the output will not be displayed.
+This section is evaluated but execution results are not included in the output.
 
 ```{python}
 #| output: false
 print(os.getcwd())
 ```
 
-# Section with code evaluation and output
+# Section with code evaluation and results included
 
-This section will be evaluated and the output will be displayed.
+This section is evaluated and execution results are included in the output.
 
 ```{python}
 print(os.getcwd())
@@ -71,31 +71,32 @@ print(os.getcwd())
 print(os.getcwd())
 ```
 
-If there is no evaluation, the code cell will not be executed.
-So the output will not be displayed.
+If there is no evaluation, the code cell is not executed.
+Thus, no execution results are included in the output.
 
 # Section without code echo
 
-This section will not be evaluated and the code cell will not be displayed on
-the rendered document.
-But the output will be displayed.
+This section is not evaluated, and the code cell is not shown in
+the rendered document. However, the output is included in the
+rendered document.
 
 ```{python}
 #| echo: false
-print("Hello World!")
+print("Hello, world!")
 ```
 
 # Section without code echo and output
-This code cell will not be displayed on
-the rendered document.
-And the output will not be displayed.
+This section is not evaluated, and the code cell is not shown in
+the rendered document. The output is also not included in the
+rendered document.
+
 ```{python}
 #| echo: false
 #| output: false
-print("Hello World!")
+print("Hello, world!")
 ```
 
-# use of variables
+# Use of variables
 
 ## Styles of text
 
@@ -110,9 +111,9 @@ print("Hello World!")
 2. Numbered list
 3. Numbered list
 
-- Bullet list
-- Bullet list
-- Bullet list
+- Bulleted list
+- Bulleted list
+- Bulleted list
 
 ![image](./../_extensions/cheat_sheet/_static/ansys.png)
 

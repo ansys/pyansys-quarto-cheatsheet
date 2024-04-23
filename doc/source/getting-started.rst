@@ -1,7 +1,67 @@
 Getting started
 ===============
 
-.. include:: ../../README.md
-   :parser: myst_parser.sphinx_
-   :start-after: ## Prerequisites
-   :end-before: > ## Usage
+This section explains how to install PyAnsys Quarto Cheat Sheet.
+
+Prerequisites
+-------------
+
+Before you can use PyAnsys Quarto Cheat Sheet, you must have Quarto installed. For installation
+information, see `Getting Started <https://quarto.org/docs/getting-started/installation.html>`_ in
+the Quarto documenation.
+
+Installation
+------------
+
+You can install PyAnsys Quarto Cheat Sheet from the GitHub repository or from an
+archive file.
+
+Install from the GitHub repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the GitHub repository, you can install the latest version of PyAnsys Quart Cheat Sheet
+from the main branch or install a version from a specific release branch.
+
+- To install the latest version from the main branch, run this command:
+
+  .. code-block:: bash
+
+     quarto use ansys-internal/pyansys-quarto-cheatsheet@main
+
+
+- To install the version from a specific release branch, rather than using ``@main``, use
+  the release branch, such as ``@v0.1.0``:
+
+
+  .. code-block:: bash
+
+     quarto use ansys-internal/pyansys-quarto-cheatsheet@v0.1.0
+
+
+Install from an archive file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To install from an archive file:
+
+#. Download the ``cheat_sheet.zip`` or ``cheat_sheet.tar.gz`` archive file from the
+   repository's `Releases <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases>`_
+   page.
+
+#. Run the command that installs PyAnsys Quarto Cheat Sheet in the Quarto environment from
+   the ZIP or TAR.GZ file.
+
+   The command that you run creates an ``_extensions`` directory in the current directory
+   with all the files for PyAnsys Quarto Cheat Sheet.
+
+   - For a ZIP file, run this command:
+
+     .. code-block:: bash
+
+        quarto use cheat_sheet.zip
+
+
+   - For a TAR.GZ file, run this command:
+
+     .. code-block:: bash
+
+         quarto use cheat_sheet.tar.gz
