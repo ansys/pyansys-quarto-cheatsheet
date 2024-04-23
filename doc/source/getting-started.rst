@@ -8,7 +8,7 @@ Prerequisites
 
 Before you can use PyAnsys Quarto Cheat Sheet, you must have Quarto installed. For installation
 information, see `Getting Started <https://quarto.org/docs/getting-started/installation.html>`_ in
-the Quarto documenation.
+the Quarto documentation.
 
 Installation
 ------------

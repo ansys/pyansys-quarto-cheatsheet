@@ -104,7 +104,7 @@ If you want to change the output directory, add the following line to the ``_qua
    output_dir: _build
 
 
-The root directory of the repostiory includes an example of a
+The root directory of the repository includes an example of a
  `_quarto.yml <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/_quarto.yml>`_ file.
 
 Other example files
