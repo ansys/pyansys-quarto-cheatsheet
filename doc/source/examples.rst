@@ -24,8 +24,7 @@ The rendered cheat sheet is saved as the ``cheat_sheet.pdf`` file in the same di
 
 You can download the PDF file of this cheat sheet by clicking the following link:
 
-.. button-link:: _static/cheat_sheet.pdf
-    :ref-type: ref
+.. button-link:: https://quarto-cheat-sheet.docs.pyansys.com/version/dev/_static/cheat_sheet.pdf
     :color: info
 
     Rendered PDF file :octicon:`download;1em`
