@@ -84,8 +84,8 @@ set ``eval: false``.
 To disable execution and exclude the cell source code in the output,
 use the ``eval``, ``echo``, and similar options within the code cell::
 
-   eval: false
-   echo: false
+   #| eval: false
+   #| echo: false
 
 
 By default, the results of executing the code are included in the output. To exclude these
