@@ -31,6 +31,13 @@ markdown and code.
         Explore examples that show how to use PyAnsys Quarto Cheat Sheet to
         create your own cheat sheets.
 
+    .. grid-item-card:: Contributing :fa:`users`
+        :padding: 2 2 2 2
+        :link: contributing
+        :link-type: doc
+
+        Learn how to contribute to the development of PyAnsys Quarto Cheat Sheet.
+
 
 .. toctree::
     :hidden:
@@ -38,3 +45,4 @@ markdown and code.
     getting-started
     user-guide
     examples
+    contributing
