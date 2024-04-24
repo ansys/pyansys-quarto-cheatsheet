@@ -22,9 +22,11 @@ Output
 
 The rendered cheat sheet is saved as the ``cheat_sheet.pdf`` file in the same directory as the QMD file.
 
-You can download the PDF file of this cheat sheet by clicking the following link:
+You can view a PDF file with the content originally provided in this cheat sheet by clicking the following link.
+If you have run the preceding command, you can open the PDF saved in the ``Examples`` directory.
+This PDF includes any changes that you might have made to the ``cheat_sheet.qmd`` file.
 
 .. button-link:: https://quarto-cheat-sheet.docs.pyansys.com/version/dev/_static/cheat_sheet.pdf
     :color: info
 
-    Rendered PDF file :octicon:`download;1em`
+    Rendered PDF file :octicon:`eye;1em`
