@@ -73,11 +73,11 @@ Build the cheat sheet
 ---------------------
 .. note::
 
-    To build cheat sheet PDF locally, you must have `quarto <https://quarto.org/docs/getting-started/installation.html>`_ installed.
+  To build cheat sheet PDF locally, you must have `quarto <https://quarto.org/docs/getting-started/installation.html>`_ installed.
 
 To build the cheat sheet PDF, run this command::
 
-  quarto render cheatsheet.qmd
+  quarto render examples/cheat_sheet.qmd
 
 The cheat sheet PDF is built in the ``_build`` directory
 since the output directory is set to ``_build`` in the ``_quarto.yml`` file.
@@ -88,7 +88,7 @@ Build the documentation
 To build the documentation locally, you must run this command to install the
 documentation dependencies in requirements_docs.txt in requirements directory::
 
-  pip install -r requirements/requirements_docs.txt
+  pip install -r requirements/requirements_doc.txt
 
 Then, navigate to the ``doc`` directory and run this command
 
@@ -108,7 +108,7 @@ Then, navigate to the ``doc`` directory and run this command
 
 The documentation is built in the ``doc/_build/html`` directory.
 
-You can clean the documentation build by running this command
+You can clean the documentation build by running this command:
 
 .. tab-set::
 
