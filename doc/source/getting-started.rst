@@ -1,7 +1,9 @@
 Getting started
 ===============
 
-This section explains how to install PyAnsys Quarto Cheat Sheet.
+This section explains how to install PyAnsys Quarto Cheat Sheet in user mode. If you are
+interested in contributing to PyAnsys Quarto Cheat Sheet, see :ref:`contribute` for information
+on installing in developer mode.
 
 Prerequisites
 -------------

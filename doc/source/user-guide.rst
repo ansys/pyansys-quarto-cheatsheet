@@ -1,16 +1,17 @@
 User guide
 ==========
 
-To render a cheat sheet as a PDF file, you run a command like this one:
+To render a cheat sheet to a PDF file locally, you run a command like this one:
 
 .. code-block:: bash
 
      quarto render examples/cheat_sheet.qmd --to cheat_sheet-pdf
 
 
-The preceding command renders the ``cheat_sheet.qmd`` file that is in
-the ``Examples`` directory to a PDF file in this same directory. For more
-information, see :ref:`cheat_sheet_example`.
+The preceding command saves the PDF file for the ``cheat_sheet.qmd`` file in
+the ``Examples`` directory to the ``doc/_build`` directory by default. If
+you want to change the output directory, you can modify the ``_quarto.yml``
+file. For more information, see :ref:`quarto-yml`.
 
 Format options
 --------------
@@ -91,21 +92,22 @@ use the ``eval``, ``echo``, and similar options within the code cell::
 By default, the results of executing the code are included in the output. To exclude these
 results, for the ``execute`` option, set ``output: false``.
 
+.. _quarto-yml:
 
 The ``_quarto.yml`` file
 ------------------------
 
-The ``_quarto.yml`` file is a configuration file that contains all the metadata at the project level.
-For more information, see the `Project Metadata <https://quarto.org/docs/projects/quarto-projects.html#project-metadata>`_
-in the Quarto documentation.
+As indicated in `Project Metadata <https://quarto.org/docs/projects/quarto-projects.html#project-metadata>`_
+in the Quarto documentation, all Quarto projects include a ``_quarto.yml`` configuration file. Any document
+rendered within the project directory automatically inherit the metadata defined at the project level.
 
-If you want to change the output directory, add the following line to the ``_quarto.yml`` file::
-
-   output_dir: _build
-
-
-The root directory of the repository includes an example of a
+The root directory of the PyAnsys Cheat Sheet repository includes an example of a
  `_quarto.yml <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/_quarto.yml>`_ file.
+
+To change the directory that PDF files for cheat sheets are saved to, you would modify this line::
+
+   latex-output-dir: _build
+
 
 Other example files
 ~~~~~~~~~~~~~~~~~~~

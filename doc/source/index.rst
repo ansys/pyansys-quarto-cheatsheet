@@ -13,15 +13,15 @@ markdown and code.
         :link: getting-started
         :link-type: doc
 
-        Learn how to install PyAnsys Quarto Cheat Sheet.
+        Learn how to install PyAnsys Quarto Cheat Sheet in user mode.
 
     .. grid-item-card:: User guide :fa:`book-open-reader`
         :padding: 2 2 2 2
         :link: user-guide
         :link-type: doc
 
-        Understand how to use the YAML configuration file for a cheat sheet
-        to format it.
+        Understand how to render a PDF file of a cheat sheet and use its
+        YAML configuration file to format it.
 
     .. grid-item-card:: Examples :fa:`code`
         :padding: 2 2 2 2
@@ -29,14 +29,15 @@ markdown and code.
         :link-type: doc
 
         Explore examples that show how to use PyAnsys Quarto Cheat Sheet to
-        create your own cheat sheets.
+        create and render your own cheat sheets.
 
     .. grid-item-card:: Contributing :fa:`users`
         :padding: 2 2 2 2
         :link: contributing
         :link-type: doc
 
-        Learn how to contribute to the development of PyAnsys Quarto Cheat Sheet.
+        Learn how to contribute to the PyAnsys Quarto Cheat Sheet codebase
+        or documentation.
 
 
 .. toctree::

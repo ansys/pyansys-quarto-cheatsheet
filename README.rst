@@ -31,13 +31,13 @@ at `PyAnsys Quarto Cheat Sheet documentation <https://quarto-cheat-sheet.docs.py
 The documentation has these sections:
 
 - `Getting started <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/getting_started.html>`_: Learn
-  how to install PyAnsys Quarto Cheat Sheet.
+  how to install PyAnsys Quarto Cheat Sheet in user mode.
 - `User guide <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/user_guide.html>`_: Understand how
-  to use the YAML configuration file for a cheat sheet to format it.
+  to render a PDF file of a cheat sheet and use its YAML configuration file to format it.
 - `Examples <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/examples.html>`_: Explore examples
-  that show how to use PyAnsys Quarto Cheat Sheet to create your own cheat sheets.
+  that show how to use PyAnsys Quarto Cheat Sheet to create and render your own cheat sheets.
 - `Contribute <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/contributing.html>`_: Learn how to
-  contribute to PyAnsys Quarto Cheat Sheet.
+  contribute to the PyAnsys Quarto Cheat Sheet codebase or documentation.
 
 In the upper right corner of the documentation's title bar, there is an option
 for switching from viewing the documentation for the latest stable release
