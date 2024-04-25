@@ -1,4 +1,4 @@
-PyAnsys Quarto Cheat Sheet documentation |version|
+PyAnsys quarto cheat sheet documentation |version|
 ==================================================
 
 PyAnsys Quarto Cheat Sheet is an extension for using `Quarto <https://quarto.org/>`_, an open
