@@ -1,50 +1,69 @@
-Getting started and basic usage
-===============================
+Getting started
+===============
 
-.. include:: ../../README.md
-   :parser: myst_parser.sphinx_
-   :start-after: # PyAnsys quarto cheat sheet format
-   :end-before: > [!NOTE]
+This section explains how to install PyAnsys Quarto Cheat Sheet in user mode. If you are
+interested in contributing to PyAnsys Quarto Cheat Sheet, see :ref:`contribute` for information
+on installing in developer mode.
+
+Prerequisites
+-------------
+
+Before you can use PyAnsys Quarto Cheat Sheet, you must have Quarto installed. For installation
+information, see `Getting Started <https://quarto.org/docs/getting-started/installation.html>`_ in
+the Quarto documentation.
+
+Installation
+------------
+
+You can install PyAnsys Quarto Cheat Sheet from the GitHub repository or from an
+archive file.
+
+Install from the GitHub repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the GitHub repository, you can install the latest version of PyAnsys Quart Cheat Sheet
+from the main branch or install a version from a specific release branch.
+
+- To install the latest version from the main branch, run this command:
+
+  .. code-block:: bash
+
+     quarto use ansys-internal/pyansys-quarto-cheatsheet@main
 
 
-.. note::
+- To install the version from a specific release branch, rather than using ``@main``, use
+  the release branch, such as ``@v0.1.0``:
 
-    By default, code cells are executed. To disable execution, use the `execute` option.
-    To turn off execution and display of individual or multiple code cells, utilize the `execute` option within the code cell.
 
-    .. code-block:: python
-        :linenos:
+  .. code-block:: bash
 
-        #| execute: false
-        #| eval: false
+     quarto use ansys-internal/pyansys-quarto-cheatsheet@v0.1.0
 
-.. important::
 
-    The output of the code cell is displayed by default. To turn off the output, use the `execute` option.
+Install from an archive file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    To disable the output of individual or multiple code cells,
-    utilize the `output` option within the code cell.
+To install from an archive file:
 
-    .. code-block:: python
-        :linenos:
+#. Download the ``cheat_sheet.zip`` or ``cheat_sheet.tar.gz`` archive file from the
+   repository's `Releases <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases>`_
+   page.
 
-        #| output: false
+#. Run the command that installs PyAnsys Quarto Cheat Sheet in the Quarto environment from
+   the ZIP or TAR.GZ file.
 
-``_quarto.yml`` file
---------------------
+   The command that you run creates an ``_extensions`` directory in the current directory
+   with all the files for PyAnsys Quarto Cheat Sheet.
 
-The `_quarto.yml` file is a configuration file that contains all the metadata at the project level.
-Refer to the `quarto documentation project <https://quarto.org/docs/projects/quarto-projects.html#project-metadata>`_
-for more information.
+   - For a ZIP file, run this command:
 
-if you want to change the output directory, add the following line to the `_quarto.yml` file.
+     .. code-block:: bash
 
-.. code-block:: yaml
+        quarto use cheat_sheet.zip
 
-    output_dir: _build
 
-if you want to clean the latex output, add the following line to the `_quarto.yml` file.
+   - For a TAR.GZ file, run this command:
 
-.. code-block:: yaml
+     .. code-block:: bash
 
-    latex-clean: true
+         quarto use cheat_sheet.tar.gz
