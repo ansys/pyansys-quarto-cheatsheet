@@ -30,9 +30,9 @@ at `PyAnsys Quarto Cheat Sheet documentation <https://quarto-cheat-sheet.docs.py
 
 The documentation has these sections:
 
-- `Getting started <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/getting_started.html>`_: Learn
+- `Getting started <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/getting-started.html>`_: Learn
   how to install PyAnsys Quarto Cheat Sheet in user mode.
-- `User guide <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/user_guide.html>`_: Understand how
+- `User guide <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/user-guide.html>`_: Understand how
   to render a PDF file of a cheat sheet and use its YAML configuration file to format it.
 - `Examples <https://quarto-cheat-sheet.docs.pyansys.com/version/dev/examples.html>`_: Explore examples
   that show how to use PyAnsys Quarto Cheat Sheet to create and render your own cheat sheets.
