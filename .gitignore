@@ -22,5 +22,6 @@ examples/cheat_sheet.sty
 examples/cheat_sheet.tex
 examples/cheat_sheet.pdf
 examples/*.png
+examples/_static/
 # output files
 _build/
