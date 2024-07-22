@@ -134,7 +134,7 @@ jobs:
           ls -l
 
       - name: "compress documentation"
-        uses: vimtot/action-zip@v1.2
+        uses: vimtor/action-zip@v1.2
         with:
           files: documentation-html
           dest: documentation-html.zip
