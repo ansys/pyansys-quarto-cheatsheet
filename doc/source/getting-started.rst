@@ -32,12 +32,12 @@ from the main branch or install a version from a specific release branch.
 
 
 - To install the version from a specific release branch, rather than using ``@main``, use
-  the release branch, such as ``@v0.1.0``:
+  the release branch, such as ``@v1``:
 
 
   .. code-block:: bash
 
-     quarto use ansys/pyansys-quarto-cheatsheet@v0.1.0
+     quarto use ansys/pyansys-quarto-cheatsheet@v1
 
 
 Install from an archive file
