@@ -102,7 +102,7 @@ in the Quarto documentation, all Quarto projects include a ``_quarto.yml`` confi
 rendered within the project directory automatically inherit the metadata defined at the project level.
 
 The root directory of the PyAnsys Cheat Sheet repository includes an example of a
- `_quarto.yml <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/_quarto.yml>`_ file.
+ `_quarto.yml <https://github.com/ansys/pyansys-quarto-cheatsheet/blob/main/_quarto.yml>`_ file.
 
 To change the directory that PDF files for cheat sheets are saved to, you would modify this line::
 
@@ -115,9 +115,9 @@ Other example files
 A Quarto QMD file is a format used for integrating plain text markdown and code into a single
 compiled document. The ``Examples`` directory contains these QMD files:
 
-- The `cheat_sheet.qmd <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/examples/cheat_sheet.qmd>`_
+- The `cheat_sheet.qmd <https://github.com/ansys/pyansys-quarto-cheatsheet/blob/main/examples/cheat_sheet.qmd>`_
   file is a template that you can use to create your own cheat sheets.
-- The `pymapdl_cheat_sheet_example_qmd <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/examples/pymapdl_cheat_sheet_example.qmd>`_
+- The `pymapdl_cheat_sheet_example_qmd <https://github.com/ansys/pyansys-quarto-cheatsheet/blob/main/examples/pymapdl_cheat_sheet_example.qmd>`_
   file is an example of a PyMAPDL cheat sheet.
 
 To render the example of a PyMAPDL cheat sheet, run this command::

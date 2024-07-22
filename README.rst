@@ -6,8 +6,8 @@ PyAnsys Quarto Cheat Sheet
    :target: https://docs.pyansys.com/
    :alt: PyAnsys
 
-.. |GH-CI| image:: https://github.com/ansys-internal/pyansys-quarto-cheatsheet/actions/workflows/ci_cd.yml/badge.svg
-   :target: https://github.com/ansys-internal/pyansys-quarto-cheatsheet/actions/workflows/ci_cd.yml
+.. |GH-CI| image:: https://github.com/ansys/pyansys-quarto-cheatsheet/actions/workflows/ci_cd.yml/badge.svg
+   :target: https://github.com/ansys/pyansys-quarto-cheatsheet/actions/workflows/ci_cd.yml
    :alt: GH-CI
 
 .. |MIT| image:: https://img.shields.io/badge/License-MIT-yellow.svg
@@ -44,7 +44,7 @@ for switching from viewing the documentation for the latest stable release
 to viewing the documentation for the development version or previously
 released versions.
 
-On the `PyAnsys Quarto Cheat Sheet Issues <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/issues>`_
+On the `PyAnsys Quarto Cheat Sheet Issues <https://github.com/ansys/pyansys-quarto-cheatsheet/issues>`_
 page, you can create issues to report bugs and request new features. On the
 `Discussions <https://discuss.ansys.com/>`_ page on the Ansys Developer portal,
 you can post questions, share ideas, and get community feedback.
@@ -57,6 +57,6 @@ question in an issue as described in the previous paragraph.
 License
 -------
 
-PyAnsys Quarto Cheat Sheet is licensed under the `MIT License <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/LICENSE>`_.
+PyAnsys Quarto Cheat Sheet is licensed under the `MIT License <https://github.com/ansys/pyansys-quarto-cheatsheet/blob/main/LICENSE>`_.
 
 PyAnsys Quarto Cheat Sheet makes no commercial claim over Ansys whatsoever.

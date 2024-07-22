@@ -21,7 +21,7 @@ development mode, run these commands:
 
 .. code::
 
-    git clone https://github.com/ansys-internal/pyansys-quarto-cheatsheet.git
+    git clone https://github.com/ansys/pyansys-quarto-cheatsheet.git
     cd pyansys-quarto-cheatsheet
 
     # Install the package in development mode
@@ -118,7 +118,7 @@ You can clean the documentation build by running this command:
 Post issues
 -----------
 
-Use the `PyAnsys Quarto Cheat Sheet Issues <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/issues>`_
+Use the `PyAnsys Quarto Cheat Sheet Issues <https://github.com/ansys/pyansys-quarto-cheatsheet/issues>`_
 page to report bugs and request new features. When possible, use the issue templates provided.
 If your issue does not fit into one of these templates, click the link for opening a blank issue.
 

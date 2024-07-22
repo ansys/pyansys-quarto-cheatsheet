@@ -3,7 +3,7 @@
 Examples
 ========
 
-The `cheat_sheet.qmd <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/blob/main/examples/cheat_sheet.qmd>`_
+The `cheat_sheet.qmd <https://github.com/ansys/pyansys-quarto-cheatsheet/blob/main/examples/cheat_sheet.qmd>`_
 file in the ``Examples`` directory is a simple QMD file that you can use as a template for creating
 your own cheat sheets.
 
