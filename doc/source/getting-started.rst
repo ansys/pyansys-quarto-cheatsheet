@@ -28,7 +28,7 @@ from the main branch or install a version from a specific release branch.
 
   .. code-block:: bash
 
-     quarto use ansys-internal/pyansys-quarto-cheatsheet@main
+     quarto use ansys/pyansys-quarto-cheatsheet@main
 
 
 - To install the version from a specific release branch, rather than using ``@main``, use
@@ -37,7 +37,7 @@ from the main branch or install a version from a specific release branch.
 
   .. code-block:: bash
 
-     quarto use ansys-internal/pyansys-quarto-cheatsheet@v0.1.0
+     quarto use ansys/pyansys-quarto-cheatsheet@v0.1.0
 
 
 Install from an archive file
@@ -46,7 +46,7 @@ Install from an archive file
 To install from an archive file:
 
 #. Download the ``cheat_sheet.zip`` or ``cheat_sheet.tar.gz`` archive file from the
-   repository's `Releases <https://github.com/ansys-internal/pyansys-quarto-cheatsheet/releases>`_
+   repository's `Releases <https://github.com/ansys/pyansys-quarto-cheatsheet/releases>`_
    page.
 
 #. Run the command that installs PyAnsys Quarto Cheat Sheet in the Quarto environment from

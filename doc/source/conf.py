@@ -28,7 +28,7 @@ html_favicon = ansys_favicon
 
 # specify the location of your github repo
 html_theme_options = {
-    "github_url": "https://github.com/ansys-internal/pyansys-quarto-cheatsheet",
+    "github_url": "https://github.com/ansys/pyansys-quarto-cheatsheet",
     "show_prev_next": False,
     "show_breadcrumbs": True,
     "additional_breadcrumbs": [
