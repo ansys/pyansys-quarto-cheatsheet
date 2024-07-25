@@ -28,7 +28,7 @@ from the main branch or install a version from a specific release branch.
 
   .. code-block:: bash
 
-     quarto add ansys/pyansys-quarto-cheatsheet@main
+   quarto add ansys/pyansys-quarto-cheatsheet@main
 
 
 - To install the version from a specific release branch, rather than using ``@main``, use
@@ -37,7 +37,13 @@ from the main branch or install a version from a specific release branch.
 
   .. code-block:: bash
 
-     quarto add ansys/pyansys-quarto-cheatsheet@v1
+   quarto add ansys/pyansys-quarto-cheatsheet@v1
+
+To install it without prompt , use ``--no-prompt`` option:
+
+  .. code-block:: bash
+
+   quarto add ansys/pyansys-quarto-cheatsheet@v1 --no-prompt
 
 
 Install from an archive file
