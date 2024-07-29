@@ -48,7 +48,6 @@ contributes:
           \usepackage[utf8]{inputenc}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
-        - cheat_sheet.sty
         - _static
       cache: false
-      resource-path: ["_output"]
+      resource-path: ["_static"]
