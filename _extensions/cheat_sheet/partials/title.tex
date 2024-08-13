@@ -89,39 +89,25 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{blue}{RGB}{57,114,161}
 \definecolor{black}{RGB}{0,0,0}
-\usepackage{framed}
 \definecolor{shadecolor}{RGB}{217,216,214} % Set the desired background color
 % renew if shaded is there
-\ifdefined\Shaded
-\renewenvironment{Shaded}{
-  \def\FrameCommand{{\color{shadecolor}\vrule width 1pt}\colorbox{shadecolor}} % Adjust frame properties
-  \MakeFramed{\advance\hsize-\width \FrameRestore \normalfont}}%
-{\endMakeFramed}
-\renewcommand{\CommentTok}[1]{\textcolor{codegreen}{#1}}
-\renewcommand{\CommentVarTok}[1]{\textcolor{magenta}{\textit{#1}}}
-\renewcommand{\ImportTok}[1]{\textcolor{magenta}{#1}}
-\renewcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\renewcommand{\KeywordTok}[1]{\textcolor{codepurple}{#1}}
-\renewcommand{\NormalTok}[1]{\textcolor{black}{#1}}
-\fi
 \lstdefinestyle{python_style}{
-	backgroundcolor=\color{silver},
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	frame=single,
-	basicstyle=\ttfamily\scale=0.95,
-	showstringspaces=false,
-  	breaklines=true,
-  	rulecolor=\color{black},
-  	captionpos=b,
-	% fontfamily=SourceCodePro-TLF,
-  	%aboveskip=10pt,
-  	%belowskip=10pt,
-  	inputencoding=utf8,
-  	extendedchars=true
-	%tabsize=2
+    backgroundcolor=\color{shadecolor}, % Set the background color
+    commentstyle=\color{codegreen}, % Style for comments
+    keywordstyle=\color{magenta}, % Style for keywords
+    numberstyle=\tiny\color{codegray}, % Style for line numbers
+    stringstyle=\color{codepurple}, % Style for strings
+    breaklines=true, % Enable line breaking
+    breakatwhitespace=true, % Break lines at whitespace
+    % linewidth=\textwidth, % Set the width of the code block to match the text width
+	basicstyle=\ttfamily\footnotesize, % Set the font style
+    frame=single, % Add a frame around the code
+    framesep=1pt, % Padding between the frame and the code
+    xleftmargin=1pt, % Left margin for the code block (adjust as needed)
+	rulecolor=\color{shadecolor},
+    % xrightmargin=15pt, % Right margin for the code block (adjust as needed)
+    showstringspaces=false, % Don't show spaces as special characters
+	tabsize=1,
 }
 \lstset{style=python_style, upquote=true}
 
@@ -134,33 +120,9 @@
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
 
-
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt plus 0.5ex}
+\setlength{\parindent}{2pt}
+\setlength{\parskip}{1pt plus 0.5ex}
 
 % My Environments
 \newtheorem{example}[section]{Example}
 % -----------------------------------------------------------------------
-
-% Define custom style for Python code
-\lstdefinestyle{pythoncode}{
-	language=Python,
-	backgroundcolor=\color{red},
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	frame=single,
-	basicstyle=\ttfamily\scale=0.95,
-	showstringspaces=false,
-  	breaklines=true,
-  	rulecolor=\color{black},
-  	captionpos=b,
-  	inputencoding=utf8,
-  	extendedchars=true
-}
-
-% Define the \pythoncode command
-\newcommand{\pythoncode}[2][]{%
-    \lstinputlisting[style=pythoncode, #1]{#2}%
-}
