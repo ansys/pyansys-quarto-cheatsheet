@@ -51,3 +51,5 @@ contributes:
         - _static
       cache: false
       resource-path: ["_static"]
+      listings: true
+      sansfontoptions: ["sfdefault"]
