@@ -1,5 +1,5 @@
-(?!)ansys
+(?i)ansys
 disable
 Knitr
 pymapdl_cheat_sheet_example_qmd
-(?!)pyansys
+(?i)pyansys
