@@ -1,7 +1,8 @@
 ---
 title: Your title here
 format: cheat_sheet-pdf
-version: Your version here
+params:
+  version: "Your version here"
 footer: Your footer here
 footerlinks:
   - urls: Your URL here

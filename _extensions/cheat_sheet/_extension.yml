@@ -49,7 +49,7 @@ contributes:
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static
-      cache: false
+      # cache: false
       resource-path: ["_static"]
       listings: true
       sansfontoptions: ["sfdefault"]
