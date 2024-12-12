@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  MAIN_PYTHON_VERSION: '3.11'
+  MAIN_PYTHON_VERSION: '3.13'
   DOCUMENTATION_CNAME: 'quarto-cheat-sheet.docs.pyansys.com'
 
 concurrency:
