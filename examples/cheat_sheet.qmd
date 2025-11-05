@@ -118,6 +118,29 @@ print("Hello, world!")
 
 ![image](./../_extensions/cheat_sheet/_static/ansys.png)
 
+## Mathematical operators and expressions
+
+Mathematical expressions with operators:
+
+- Comparison operators: $a \geq b$, $a \leq b$, $a > b$, $a < b$, $a = b$, $a \neq b$
+- Arithmetic operations: $a + b$, $a - b$, $a \times b$, $a \div b$, $a^2$, $\sqrt{a}$
+- Logical operators: $a \land b$, $a \lor b$, $\neg a$
+- Set operations: $A \cup B$, $A \cap B$, $A \subseteq B$, $x \in A$
+
+Complex expressions:
+$$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
+
+$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$
+
+Algorithm pseudocode with math symbols:
+```
+for i = 1 to n:
+    if x[i] ≥ threshold:
+        result[i] ← x[i] × weight
+    else:
+        result[i] ← 0
+```
+
 ## Subsection
 
 - Add subsections as needed.
