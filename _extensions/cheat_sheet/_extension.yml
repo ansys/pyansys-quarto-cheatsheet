@@ -44,7 +44,7 @@ contributes:
           \usepackage{listings}
           \usepackage[x11names]{xcolor}
           \usepackage{fontspec}
-          \usepackage[math-style=ISO]{unicode-math}
+          \usepackage{unicode-math}
           \setmathfont{Latin Modern Math}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
