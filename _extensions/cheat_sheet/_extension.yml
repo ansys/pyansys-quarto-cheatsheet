@@ -25,6 +25,7 @@ version: 0.1.0
 contributes:
   formats:
     pdf:
+      pdf-engine: pdflatex
       documentclass: article
       fontsize: 9pt
       classoption: landscape
@@ -46,7 +47,7 @@ contributes:
           \usepackage[x11names]{xcolor}
           \usepackage[T1]{fontenc}
           \usepackage[utf8]{inputenc}
-          \setmathfont{Latin Modern Math}
+          \usepackage{lmodern}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static
