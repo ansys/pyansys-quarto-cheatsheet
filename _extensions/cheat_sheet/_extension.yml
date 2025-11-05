@@ -45,6 +45,8 @@ contributes:
           \usepackage[x11names]{xcolor}
           \usepackage{fontspec}
           \setmathfont{Latin Modern Math}
+          \usepackage{algorithm}
+          \usepackage{algpseudocode}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static
