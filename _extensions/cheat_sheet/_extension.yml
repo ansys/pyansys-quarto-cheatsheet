@@ -25,7 +25,6 @@ version: 0.1.0
 contributes:
   formats:
     pdf:
-      pdf-engine: pdflatex
       documentclass: article
       fontsize: 9pt
       classoption: landscape
