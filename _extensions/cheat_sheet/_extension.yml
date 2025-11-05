@@ -46,9 +46,10 @@ contributes:
           \usepackage[x11names]{xcolor}
           \usepackage[T1]{fontenc}
           \usepackage[utf8]{inputenc}
-          \usepackage{lmodern}
           \usepackage{fontspec}
+          \usepackage{unicode-math}
           \setmathfont{Latin Modern Math}
+          \setmathfont[range={\infty,\leq,\geq,\sqrt}]{Latin Modern Math}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static
