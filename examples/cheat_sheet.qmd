@@ -144,7 +144,7 @@ for i = 1 to n:
 You can also leverage the ``algorithm`` and ``algpseudocode`` LaTeX packages for
 more advanced algorithm representation.
 
-$$
+```{=latex}
 \begin{algorithm}
 \caption{Sample Algorithm}
 \begin{algorithmic}
@@ -164,7 +164,7 @@ $$
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-$$
+```
 
 ## Subsection
 
