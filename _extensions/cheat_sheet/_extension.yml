@@ -31,7 +31,6 @@ contributes:
       authorcols: false
       header-includes: |
           \usepackage[landscape]{geometry}
-          \usepackage{amsmath,amsthm,amsfonts,amssymb}
           \usepackage{color,graphicx}
           \usepackage[bookmarks=false]{hyperref}
           \usepackage{wrapfig}
@@ -44,11 +43,9 @@ contributes:
           \usepackage{multirow}
           \usepackage{listings}
           \usepackage[x11names]{xcolor}
-          \usepackage[T1]{fontenc}
-          \usepackage[utf8]{inputenc}
           \usepackage{fontspec}
-          \usepackage{unicode-math}
-          \setmathfont{latinmodern-math.otf}
+          \usepackage[math-style=ISO]{unicode-math}
+          \setmathfont{Latin Modern Math}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static
