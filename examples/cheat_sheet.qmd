@@ -144,7 +144,8 @@ for i = 1 to n:
 You can also leverage the ``algorithm`` and ``algpseudocode`` LaTeX packages for
 more advanced algorithm representation.
 
-```{algorithm}
+$$
+\begin{algorithm}
 \caption{Sample Algorithm}
 \begin{algorithmic}
 \Require $n \geq 0$
@@ -163,7 +164,7 @@ more advanced algorithm representation.
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
-```
+$$
 
 ## Subsection
 
