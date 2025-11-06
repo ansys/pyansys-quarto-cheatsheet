@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -31,7 +31,6 @@ contributes:
       authorcols: false
       header-includes: |
           \usepackage[landscape]{geometry}
-          \usepackage{amsmath,amsthm,amsfonts,amssymb}
           \usepackage{color,graphicx}
           \usepackage[bookmarks=false]{hyperref}
           \usepackage{wrapfig}
@@ -44,8 +43,10 @@ contributes:
           \usepackage{multirow}
           \usepackage{listings}
           \usepackage[x11names]{xcolor}
-          \usepackage[T1]{fontenc}
-          \usepackage[utf8]{inputenc}
+          \usepackage{fontspec}
+          \setmathfont{Latin Modern Math}
+          \usepackage{algorithm}
+          \usepackage{algpseudocode}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
       format-resources:
         - _static

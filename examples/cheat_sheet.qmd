@@ -118,6 +118,54 @@ print("Hello, world!")
 
 ![image](./../_extensions/cheat_sheet/_static/ansys.png)
 
+## Mathematical operators and expressions
+
+Mathematical expressions with operators:
+
+- Comparison operators: $a \geq b$, $a \leq b$, $a > b$, $a < b$, $a = b$, $a \neq b$
+- Arithmetic operations: $a + b$, $a - b$, $a \times b$, $a \div b$, $a^2$, $\sqrt{a}$
+- Logical operators: $a \land b$, $a \lor b$, $\neg a$
+- Set operations: $A \cup B$, $A \cap B$, $A \subseteq B$, $x \in A$
+
+Complex expressions:
+$$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
+
+$$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$
+
+Algorithm pseudocode with math symbols:
+```
+for i = 1 to n:
+    if x[i] ≥ threshold:
+        result[i] ← x[i] × weight
+    else:
+        result[i] ← 0
+```
+
+You can also leverage the ``algorithm`` and ``algpseudocode`` LaTeX packages for
+more advanced algorithm representation.
+
+```{=latex}
+\begin{algorithm}[H]
+\caption{Sample Algorithm}
+\begin{algorithmic}
+\Require $n \geq 0$
+\Ensure $y = x^n$
+\State $y \gets 1$
+\State $X \gets x$
+\State $N \gets n$
+\While{$N \neq 0$}
+\If{$N$ is even}
+    \State $X \gets X \times X$
+    \State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+\ElsIf{$N$ is odd}
+    \State $y \gets y \times X$
+    \State $N \gets N - 1$
+\EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+```
+
 ## Subsection
 
 - Add subsections as needed.
