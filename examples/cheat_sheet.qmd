@@ -145,7 +145,7 @@ You can also leverage the ``algorithm`` and ``algpseudocode`` LaTeX packages for
 more advanced algorithm representation.
 
 ```{=latex}
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{Sample Algorithm}
 \begin{algorithmic}
 \Require $n \geq 0$
