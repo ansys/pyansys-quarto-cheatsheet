@@ -102,8 +102,16 @@
     % xrightmargin=15pt, % Right margin for the code block (adjust as needed)
     showstringspaces=false, % Don't show spaces as special characters
 	tabsize=1,
+    aboveskip=3pt,
+    belowskip=3pt,
 }
-\lstset{style=python_style, upquote=true}
+\lstset{
+    style=python_style,
+    upquote=true,
+    aboveskip=4pt,
+    belowskip=4pt
+}
+% Define code command
 
 \def\code#1{\textit{}{#1}}
 
