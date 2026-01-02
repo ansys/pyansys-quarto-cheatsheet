@@ -1,4 +1,4 @@
-# Copyright (C) 2024 - 2025 ANSYS, Inc. and/or its affiliates.
+# Copyright (C) 2024 - 2026 ANSYS, Inc. and/or its affiliates.
 # SPDX-License-Identifier: MIT
 #
 #
@@ -44,7 +44,6 @@ contributes:
           \usepackage{listings}
           \usepackage[x11names]{xcolor}
           \usepackage{fontspec}
-          \setmathfont{Latin Modern Math}
           \usepackage{algorithm}
           \usepackage{algpseudocode}
       template-partials: ["partials/before-body.tex", partials/title.tex, partials/after-body.tex]
