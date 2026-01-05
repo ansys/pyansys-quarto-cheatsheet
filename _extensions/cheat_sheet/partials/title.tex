@@ -44,6 +44,7 @@
 \usepackage{sourcecodepro}
 %\usepackage{ragged2e}
 %\usepackage[dvipsnames]{xcolor}
+\usepackage[defaultsans]{opensans}
 
 % Optimized page margins for cheat sheet layout
 % Consistent minimal margins across all paper sizes for maximum content space
@@ -57,20 +58,6 @@
 % Turn off header and footer
 \pagestyle{empty}
 
-% Optimized section spacing for cheat sheet density
-\makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0mm}%
-  {-0.3ex plus -0.1ex minus -0.05ex}%  % Reduced space before section
-  {0.2ex plus 0.05ex}%                 % Reduced space after section
-  {\normalfont\large\bfseries
-   \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
-
-\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-  {0.3ex plus 0.1ex minus 0.05ex}%     % Reduced space before subsection
-  {0.2ex plus 0.05ex}%                 % Reduced space after subsection
-  {\normalfont\normalsize\bfseries}}
-\makeatother
-% \makeatother
 \definecolor{silver}{RGB}{217,216,214}
 \definecolor{gold}{RGB}{255,183,27}
 \definecolor{steel}{RGB}{137,138,141}
@@ -82,7 +69,30 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{blue}{RGB}{57,114,161}
 \definecolor{black}{RGB}{0,0,0}
+% \definecolor{shadecolor}{RGB}{243,244,245} % #f3f4f5
 \definecolor{shadecolor}{RGB}{217,216,214} % Set the desired background color
+\definecolor{lightbg}{RGB}{248,248,248} % Light subsection background color
+
+% Optimized section spacing for cheat sheet density
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+  {-0.3ex plus -0.1ex minus -0.05ex}%  % Reduced space before section
+  {0.2ex plus 0.05ex}%                 % Reduced space after section
+  {\sffamily\normalsize\bfseries
+   \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
+
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+  {0.3ex plus 0.1ex minus 0.05ex}%     % Reduced space before subsection
+  {0.2ex plus 0.05ex}%  
+    {\sffamily\footnotesize\bfseries}}               % Reduced space after subsection
+%   {\subsectionformat}}
+
+% Define the subsection formatting command
+% \newcommand{\subsectionformat}[1]{%
+%   \par\hspace{-\parindent}\noindent\colorbox{silver}{\parbox{\dimexpr\linewidth-2\fboxsep}{\sffamily\scriptsize\bfseries#1}}\par\vspace{2pt}%
+% }
+\makeatother
+
 % Optimized code block styling for cheat sheet density
 \lstdefinestyle{python_style}{
     backgroundcolor=\color{shadecolor}, % Set the background color
@@ -94,12 +104,12 @@
     breakatwhitespace=true, % Break lines at whitespace
     basicstyle=\ttfamily\scriptsize, % Smaller font for more content
     frame=single, % Add a frame around the code
-    framesep=0pt, % No padding between frame and code
-    xleftmargin=0pt, % No left margin for maximum width
+    framesep=1pt, % padding between frame and code
+    xleftmargin=1pt, % No left margin for maximum width
     rulecolor=\color{shadecolor},
     showstringspaces=false, % Don't show spaces as special characters
     tabsize=2, % Smaller tab size
-    aboveskip=0.5pt, % Minimal space above code blocks
+    aboveskip=1pt, % Minimal space above code blocks
     belowskip=1pt, % Minimal space below code blocks
 }
 \lstset{
@@ -120,7 +130,7 @@
 % Optimized spacing for cheat sheet density
 % Minimal paragraph indentation and controlled vertical spacing
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.5pt plus 0.5ex}
+\setlength{\parskip}{2pt plus 1ex}
 
 % Additional space optimization settings
 \setlength{\columnsep}{10pt}        % Space between columns in multicol
