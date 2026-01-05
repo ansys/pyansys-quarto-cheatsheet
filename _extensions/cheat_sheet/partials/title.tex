@@ -45,31 +45,31 @@
 %\usepackage{ragged2e}
 %\usepackage[dvipsnames]{xcolor}
 
-% This sets page margins to .5 inch if using letter paper, and to 1cm
-% if using A4 paper. (This probably isn't strictly necessary.)
-% If using another size paper, use default 1cm margins.
+% Optimized page margins for cheat sheet layout
+% Consistent minimal margins across all paper sizes for maximum content space
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.15in,left=.25in,right=.25in,bottom=.15in} }
+    { \geometry{top=0.3in,left=0.3in,right=0.3in,bottom=0.3in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
-        {\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
+        {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
     }
 
 % Turn off header and footer
 \pagestyle{empty}
 
-% Redefine section commands to use less space
+% Optimized section spacing for cheat sheet density
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
-  {-0.5ex plus -0.2ex minus -0.1ex}%
-  {0.3ex plus 0.1ex}%
+  {-0.3ex plus -0.1ex minus -0.05ex}%  % Reduced space before section
+  {0.2ex plus 0.05ex}%                 % Reduced space after section
   {\normalfont\large\bfseries
-   \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.3em}}}
+   \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
 
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-  {0.5ex plus 0.2ex minus 0.1ex}%
-  {0.3ex plus 0.1ex}%
+  {0.3ex plus 0.1ex minus 0.05ex}%     % Reduced space before subsection
+  {0.2ex plus 0.05ex}%                 % Reduced space after subsection
   {\normalfont\normalsize\bfseries}}
+\makeatother
 % \makeatother
 \definecolor{silver}{RGB}{217,216,214}
 \definecolor{gold}{RGB}{255,183,27}
@@ -83,7 +83,7 @@
 \definecolor{blue}{RGB}{57,114,161}
 \definecolor{black}{RGB}{0,0,0}
 \definecolor{shadecolor}{RGB}{217,216,214} % Set the desired background color
-% renew if shaded is there
+% Optimized code block styling for cheat sheet density
 \lstdefinestyle{python_style}{
     backgroundcolor=\color{shadecolor}, % Set the background color
     commentstyle=\color{codegreen}, % Style for comments
@@ -92,17 +92,15 @@
     stringstyle=\color{codepurple}, % Style for strings
     breaklines=true, % Enable line breaking
     breakatwhitespace=true, % Break lines at whitespace
-    % linewidth=\textwidth, % Set the width of the code block to match the text width
-	basicstyle=\ttfamily\footnotesize, % Set the font style
+    basicstyle=\ttfamily\scriptsize, % Smaller font for more content
     frame=single, % Add a frame around the code
-    framesep=0pt, % Padding between the frame and the code
-    xleftmargin=1pt, % Left margin for the code block (adjust as needed)
-	rulecolor=\color{shadecolor},
-    % xrightmargin=15pt, % Right margin for the code block (adjust as needed)
+    framesep=0pt, % No padding between frame and code
+    xleftmargin=0pt, % No left margin for maximum width
+    rulecolor=\color{shadecolor},
     showstringspaces=false, % Don't show spaces as special characters
-	tabsize=1,
-    aboveskip=1pt,
-    belowskip=2pt,
+    tabsize=2, % Smaller tab size
+    aboveskip=0.5pt, % Minimal space above code blocks
+    belowskip=1pt, % Minimal space below code blocks
 }
 \lstset{
     style=python_style,
@@ -119,5 +117,11 @@
 % Don't print section numbers
 \setcounter{secnumdepth}{0}
 
-\setlength{\parindent}{1pt}
-\setlength{\parskip}{2pt plus 1ex}
+% Optimized spacing for cheat sheet density
+% Minimal paragraph indentation and controlled vertical spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5pt plus 0.5ex}
+
+% Additional space optimization settings
+\setlength{\columnsep}{10pt}        % Space between columns in multicol
+\setlength{\multicolsep}{2pt plus 1pt minus 1pt}  % Space before/after multicol
