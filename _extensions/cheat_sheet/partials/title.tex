@@ -49,7 +49,7 @@
 % Optimized page margins for cheat sheet layout
 % Consistent minimal margins across all paper sizes for maximum content space
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=0.3in,left=0.3in,right=0.3in,bottom=0.3in} }
+     { \geometry{top=0.3in,left=0.3in,right=0.3in,bottom=0.3in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
         {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
         {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
@@ -63,28 +63,26 @@
 \definecolor{steel}{RGB}{137,138,141}
 \definecolor{lead}{RGB}{55,58,54}
 \definecolor{bronze}{RGB}{200,146,17}
-\definecolor{cblack}{RGB}{0,0,0}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{blue}{RGB}{57,114,161}
-\definecolor{black}{RGB}{0,0,0}
-% \definecolor{shadecolor}{RGB}{243,244,245} % #f3f4f5
-\definecolor{shadecolor}{RGB}{217,216,214} % Set the desired background color
-\definecolor{lightbg}{RGB}{248,248,248} % Light subsection background color
+\definecolor{shadecolor}{RGB}{236,236,236} % #ececec
+\definecolor{lightgray}{RGB}{53,53,53} % #353535
+
 
 % Optimized section spacing for cheat sheet density
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
-  {-0.3ex plus -0.1ex minus -0.05ex}%  % Reduced space before section
-  {0.2ex plus 0.05ex}%                 % Reduced space after section
-  {\sffamily\normalsize\bfseries
+  {1.5ex plus 0.5ex minus 0.2ex}%  % Better space before section
+  {0.8ex plus 0.3ex minus 0.1ex}%  % Better space after section
+  {\normalfont\large\bfseries
    \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
 
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-  {0.3ex plus 0.1ex minus 0.05ex}%     % Reduced space before subsection
-  {0.2ex plus 0.05ex}%
-    {\sffamily\footnotesize\bfseries}}               % Reduced space after subsection
+  {0.8ex plus 0.3ex minus 0.1ex}%      % Better space before subsection
+  {0.4ex plus 0.2ex minus 0.1ex}%      % Better space after subsection
+  {\normalfont\footnotesize\bfseries\color{black}}}
 %   {\subsectionformat}}
 
 % Define the subsection formatting command
@@ -108,9 +106,9 @@
     xleftmargin=1pt, % No left margin for maximum width
     rulecolor=\color{shadecolor},
     showstringspaces=false, % Don't show spaces as special characters
-    tabsize=2, % Smaller tab size
-    aboveskip=1pt, % Minimal space above code blocks
-    belowskip=1pt, % Minimal space below code blocks
+    tabsize=1, % Smaller tab size
+    aboveskip=2pt, % Minimal space above code blocks
+    belowskip=2pt, % Minimal space below code blocks
 }
 \lstset{
     style=python_style,
@@ -124,7 +122,7 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-% Don't print section numbers
+% Dont print section numbers
 \setcounter{secnumdepth}{0}
 
 % Optimized spacing for cheat sheet density
