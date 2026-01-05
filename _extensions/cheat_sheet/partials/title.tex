@@ -82,7 +82,7 @@
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
   {0.8ex plus 0.3ex minus 0.1ex}%      % Better space before subsection
   {0.4ex plus 0.2ex minus 0.1ex}%      % Better space after subsection
-  {\normalfont\footnotesize\bfseries\color{black}}}
+  {\normalfont\small\bfseries\color{black}}}
 \makeatother
 
 % Optimized code block styling for cheat sheet density
@@ -101,8 +101,6 @@
     rulecolor=\color{shadecolor},
     showstringspaces=false, % Don't show spaces as special characters
     tabsize=1, % Smaller tab size
-    aboveskip=2pt, % Minimal space above code blocks
-    belowskip=2pt, % Minimal space below code blocks
 }
 \lstset{
     style=python_style,
@@ -121,7 +119,7 @@
 
 % Optimized spacing for cheat sheet density
 % Minimal paragraph indentation and controlled vertical spacing
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{2pt}
 \setlength{\parskip}{2pt plus 1ex}
 
 % Additional space optimization settings
