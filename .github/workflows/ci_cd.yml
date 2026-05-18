@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Run code style checks"
-        uses: ansys/actions/code-style@v8
+        uses: ansys/actions/code-style@v10
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           use-python-cache: false
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Run documentation style checks"
-        uses: ansys/actions/doc-style@v8
+        uses: ansys/actions/doc-style@v10
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           vale-version: "3.3.0"
@@ -44,7 +44,7 @@ jobs:
     needs: [code-style, doc-style]
     steps:
       - name: "Check out repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Install zip, gzip, tar"
         run: |
@@ -61,7 +61,7 @@ jobs:
           ls -l
 
       - name: "Upload artifacts"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           path: |
             cheat_sheet.zip
@@ -77,7 +77,7 @@ jobs:
           quarto --version
 
       - name: "Set up Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
 
@@ -100,7 +100,7 @@ jobs:
           mv examples/_build/cheat_sheet.pdf doc/_build/html/_static
 
       - name: "Upload documentation artifacts"
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: documentation-html
           path: doc/_build/html
@@ -112,7 +112,7 @@ jobs:
     if: github.event_name == 'push' && !contains(github.ref, 'refs/tags')
     needs: [create-archives]
     steps:
-      - uses: ansys/actions/doc-deploy-dev@v8
+      - uses: ansys/actions/doc-deploy-dev@v10
         with:
             cname: ${{ env.DOCUMENTATION_CNAME }}
             token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
@@ -125,23 +125,23 @@ jobs:
     needs: create-archives
     steps:
       - name: "Check out repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Download artifacts"
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
 
       - name: "List files in directory"
         run: |
           ls -l
 
       - name: "compress documentation"
-        uses: vimtor/action-zip@v1.2
+        uses: vimtor/action-zip@v1.3
         with:
           files: documentation-html
           dest: documentation-html.zip
 
       - name: "Create release"
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             cheat_sheet.zip
@@ -156,7 +156,7 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags')
     needs: release
     steps:
-      - uses: ansys/actions/doc-deploy-stable@v8
+      - uses: ansys/actions/doc-deploy-stable@v10
         with:
             cname: ${{ env.DOCUMENTATION_CNAME }}
             token: ${{ secrets.PYANSYS_CI_BOT_TOKEN }}
