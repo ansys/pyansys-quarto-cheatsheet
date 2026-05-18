@@ -25,3 +25,5 @@ examples/*.png
 examples/_static/
 # output files
 _build/
+
+**/*.quarto_ipynb
