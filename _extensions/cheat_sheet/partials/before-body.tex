@@ -22,25 +22,23 @@
 
 \raggedright
 \footnotesize
+\vspace*{-1.1em}
 $if(title)$
 \begin{center}
-     \Huge{\textbf{$title$}} \\
-\end{center}
-$endif$
-
-\vspace{0.2cm}
-
+    {\Large\textbf{$title$}} \\[0.05em]
 $if(version)$
-\begin{center}
-    \small{\textbf{Version: $version$}} \\
+    {\tiny\textbf{Version: $version$}} \\[-0.8em]
+$endif$
 \end{center}
 $endif$
+\vspace{-0.5em}
 \AddToShipoutPicture*
 	{\put(670,577.5){\includegraphics[height = 1.2cm]{./_static/ansys_part_of_synopsys.png}}}
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth]{./_static/bground.png}}
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{2pt}}
 
 \begin{multicols}{3}
+\raggedcolumns
 % multicol parameters
 % These lengths are set only within the two main columns
 %\setlength{\columnseprule}{0.25pt}
