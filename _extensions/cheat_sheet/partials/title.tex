@@ -37,6 +37,7 @@
 \usepackage{ifthen}
 \usepackage{multirow}
 \usepackage{listings}
+\usepackage{fvextra}
 \usepackage[x11names]{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -80,10 +81,15 @@
    \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
 
 \renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-  {0.8ex plus 0.3ex minus 0.1ex}%      % Better space before subsection
-  {0.4ex plus 0.2ex minus 0.1ex}%      % Better space after subsection
+    {0.5ex plus 0.2ex minus 0.1ex}%      % Tighter space before subsection
+    {0.2ex plus 0.1ex minus 0.1ex}%      % Tighter space after subsection
   {\normalfont\small\bfseries\color{black}}}
 \makeatother
+
+% Tighten framed/shaded block spacing to avoid premature column/page breaks.
+\setlength{\FrameSep}{1pt}
+\setlength{\OuterFrameSep}{0.5pt}
+\renewenvironment{Shaded}{\vspace{0.2ex}\begin{snugshade}}{\end{snugshade}\vspace{0.1ex}}
 
 % Optimized code block styling for cheat sheet density
 \lstdefinestyle{python_style}{
@@ -93,7 +99,12 @@
     numberstyle=\tiny\color{codegray}, % Style for line numbers
     stringstyle=\color{codepurple}, % Style for strings
     breaklines=true, % Enable line breaking
-    breakatwhitespace=true, % Break lines at whitespace
+    breakatwhitespace=false, % Allow long tokens (for example imports) to wrap
+    columns=fullflexible, % Improve wrapping/alignment in narrow columns
+    keepspaces=true, % Preserve spacing while still allowing line wraps
+    breakindent=0pt, % Avoid extra indentation that can push text into next column
+    linewidth=\linewidth, % Constrain listings to current column width
+    resetmargins=true, % Ensure no inherited margins widen the listing box
     basicstyle=\ttfamily\scriptsize, % Smaller font for more content
     frame=single, % Add a frame around the code
     framesep=1pt, % padding between frame and code
@@ -105,6 +116,18 @@
 \lstset{
     style=python_style,
     upquote=true,
+}
+
+% Pandoc emits code blocks as Highlighting/Verbatim environments.
+% Force robust wrapping for long identifiers (for example import paths).
+\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{
+    commandchars=\\\{\},
+    breaklines=true,
+    breakanywhere=true,
+    fontsize=\scriptsize,
+    baselinestretch=0.95,
+    breaksymbolleft={},
+    breaksymbolright={}
 }
 % Define code command
 
@@ -120,7 +143,7 @@
 % Optimized spacing for cheat sheet density
 % Minimal paragraph indentation and controlled vertical spacing
 \setlength{\parindent}{2pt}
-\setlength{\parskip}{2pt plus 1ex}
+\setlength{\parskip}{1.5pt}
 
 % Additional space optimization settings
 \setlength{\columnsep}{10pt}        % Space between columns in multicol
