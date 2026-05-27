@@ -19,4 +19,5 @@ repos:
     - id: add-license-headers
       files: '(_extensions)/.*\.(yml|sty|tex)'
       args:
-      - --start_year=2024
+        - --custom_license=Apache-2.0
+        - --start_year=2024
