@@ -1,0 +1,135 @@
+[
+    {
+        "objectID": "examples",
+        "href": "examples.html#examples",
+        "title": "Examples",
+        "section": "Examples",
+        "text": "The cheat_sheet.qmd\nfile in the Examples directory is a simple QMD file that you can use as a template for creating\nyour own cheat sheets.\nTo use PyAnsys Quarto Cheat Sheet to render this QMD file as a cheat sheet in PDF format, run this command:\nExamples\nExamples"
+    },
+    {
+        "objectID": "examples",
+        "href": "examples.html#output",
+        "title": "Examples > Output",
+        "section": "Output",
+        "text": "The rendered cheat sheet is saved as the cheat_sheet.pdf file in the same directory as the QMD file.\nYou can view a PDF file with the content originally provided in this cheat sheet by clicking the following link.\nIf you have run the preceding command, you can open the PDF saved in the Examples directory.\nThis PDF includes any changes that you might have made to the cheat_sheet.qmd file.\nRendered PDF file <svg version=\"1.1\" width=\"1.0em\" height=\"1.0em\" class=\"sd-octicon sd-octicon-eye\" viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z\"></path></svg>\nOutput\ncheat_sheet.pdf\nExamples\ncheat_sheet.qmd"
+    },
+    {
+        "objectID": "getting-started",
+        "href": "getting-started.html#getting-started",
+        "title": "Getting started",
+        "section": "Getting started",
+        "text": "This section explains how to install PyAnsys Quarto Cheat Sheet in user mode. If you are\ninterested in contributing to PyAnsys Quarto Cheat Sheet, see contribute for information\non installing in developer mode.\nGetting started"
+    },
+    {
+        "objectID": "getting-started",
+        "href": "getting-started.html#prerequisites",
+        "title": "Getting started > Prerequisites",
+        "section": "Prerequisites",
+        "text": "Before you can use PyAnsys Quarto Cheat Sheet, you must have Quarto installed. For installation\ninformation, see Getting Started in\nthe Quarto documentation.\nPrerequisites"
+    },
+    {
+        "objectID": "getting-started",
+        "href": "getting-started.html#installation",
+        "title": "Getting started > Installation",
+        "section": "Installation",
+        "text": "You can install PyAnsys Quarto Cheat Sheet from the GitHub repository or from an\narchive file.\nInstallation"
+    },
+    {
+        "objectID": "getting-started",
+        "href": "getting-started.html#install-from-the-github-repository",
+        "title": "Getting started > Install from the GitHub repository",
+        "section": "Install from the GitHub repository",
+        "text": "From the GitHub repository, you can install the latest version of PyAnsys Quart Cheat Sheet\nfrom the main branch or install a version from a specific release branch.\nTo install the latest version from the main branch, run this command:\nTo install the version from a specific release branch, rather than using @main, use\nthe release branch, such as @v1:\nTo install it without prompt , use --no-prompt option:\nInstall from the GitHub repository\n@main\n@v1\n--no-prompt"
+    },
+    {
+        "objectID": "getting-started",
+        "href": "getting-started.html#install-from-an-archive-file",
+        "title": "Getting started > Install from an archive file",
+        "section": "Install from an archive file",
+        "text": "To install from an archive file:\nDownload the cheat_sheet.zip or cheat_sheet.tar.gz archive file from the\nrepository’s Releases\npage.\nRun the command that installs PyAnsys Quarto Cheat Sheet in the Quarto environment from\nthe ZIP or TAR.GZ file.\nThe command that you run creates an _extensions directory in the current directory\nwith all the files for PyAnsys Quarto Cheat Sheet.\nFor a ZIP file, run this command:\nFor a TAR.GZ file, run this command:\nInstall from an archive file\ncheat_sheet.zip\ncheat_sheet.tar.gz\n_extensions"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#contribute",
+        "title": "Contribute",
+        "section": "Contribute",
+        "text": "Overall guidance on contributing to a PyAnsys library appears in the\nContributing topic\nin the PyAnsys developer’s guide. Ensure that you are thoroughly familiar\nwith this guide before attempting to contribute to PyAnsys Quarto Cheat Sheet.\nThe following contribution information is specific to PyAnsys Quarto Cheat Sheet.\nContribute"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#install-in-developer-mode",
+        "title": "Contribute > Install in developer mode",
+        "section": "Install in developer mode",
+        "text": "Installing PyAnsys Quarto Cheat Sheet in developer mode allows you to modify\nand enhance the source.\nTo clone and install the latest version of PyAnsys Quarto Cheat Sheet in\ndevelopment mode, run these commands:\nInstall in developer mode"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#adhere-to-code-style",
+        "title": "Contribute > Adhere to code style",
+        "section": "Adhere to code style",
+        "text": "PyAnsys Quarto Cheat Sheet follows the PEP8 standard as outlined in\nPEP 8 in\nthe PyAnsys developer’s guide and implements style checking using\npre-commit.\nTo ensure your code meets minimum code styling standards, run these commands:\nYou can also install this as a pre-commit hook by running this command:\nThis way, it’s not possible for you to push code that fails the style checks:\nAdhere to code style"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#render-a-cheat-sheet",
+        "title": "Contribute > Render a cheat sheet",
+        "section": "Render a cheat sheet",
+        "text": "To render a cheat sheet to a PDF file locally, you must have Quarto installed. For\ninstallation information, see Getting Started\nin the Quarto documentation.\nTo render a cheat sheet to a PDF file, run a command like this one:\nThe preceding command saves the PDF file for the cheat_sheet.qmd file in\nthe Examples directory to the doc/_build directory by default. If you\nwant to change the output directory, you can modify the _quarto.yml file.\nFor more information, see quarto-yml.\nRender a cheat sheet\ncheat_sheet.qmd\nExamples\ndoc/_build\n_quarto.yml"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#build-the-documentation",
+        "title": "Contribute > Build the documentation",
+        "section": "Build the documentation",
+        "text": "To build the documentation locally, you must run this command to install the\ndocumentation dependencies in the requirements_docs.txt file in the requirements\ndirectory:\nThen, navigate to the doc directory and run this command\nThe documentation is built in the doc/_build/html directory.\nYou can clean the documentation build by running this command:\nBuild the documentation\nrequirements_docs.txt\nrequirements\ndoc\ndoc/_build/html"
+    },
+    {
+        "objectID": "contributing",
+        "href": "contributing.html#post-issues",
+        "title": "Contribute > Post issues",
+        "section": "Post issues",
+        "text": "Use the PyAnsys Quarto Cheat Sheet Issues\npage to report bugs and request new features. When possible, use the issue templates provided.\nIf your issue does not fit into one of these templates, click the link for opening a blank issue.\nIf you have general questions about the PyAnsys ecosystem, email pyansys.core@ansys.com.\nIf your question is specific to PyAnsys Quarto Cheat Sheet, ask your question in an issue as described\nin the previous paragraph.\nPost issues"
+    },
+    {
+        "objectID": "index",
+        "href": "index.html#pyansys-quarto-cheat-sheet-documentation-103",
+        "title": "PyAnsys quarto cheat sheet documentation 1.0.3",
+        "section": "PyAnsys quarto cheat sheet documentation 1.0.3",
+        "text": "PyAnsys Quarto Cheat Sheet is an extension for using Quarto, an open\nsource scientific and technical publishing system, to generate cheat sheets from plain text\nmarkdown and code.\nLearn how to install PyAnsys Quarto Cheat Sheet in user mode.\nUnderstand how to render a PDF file of a cheat sheet and use its\nYAML configuration file to format it.\nExplore examples that show how to use PyAnsys Quarto Cheat Sheet to\ncreate and render your own cheat sheets.\nLearn how to contribute to the PyAnsys Quarto Cheat Sheet codebase\nor documentation.\nPyAnsys quarto cheat sheet documentation 1.0.3"
+    },
+    {
+        "objectID": "user-guide",
+        "href": "user-guide.html#user-guide",
+        "title": "User guide",
+        "section": "User guide",
+        "text": "To render a cheat sheet to a PDF file locally, you run a command like this one:\nThe preceding command saves the PDF file for the cheat_sheet.qmd file in\nthe Examples directory to the doc/_build directory by default. If\nyou want to change the output directory, you can modify the _quarto.yml\nfile. For more information, see quarto-yml.\nUser guide\ncheat_sheet.qmd\nExamples\ndoc/_build\n_quarto.yml"
+    },
+    {
+        "objectID": "user-guide",
+        "href": "user-guide.html#format-options",
+        "title": "User guide > Format options",
+        "section": "Format options",
+        "text": "The YAML configuration file for a cheat sheet specifies format options:\nversion: Version of the cheat sheet:\ntitle: Title of the cheat sheet:\nfooter: Footer text of the cheat sheet:\nfooterlinks: List of links to display in the footer of the cheat sheet.\nEach link must have a urls and text option:\nformat: Format for rendering the cheat sheet. For PDF generation, use cheat_sheet-pdf:\nexecute: Controls code and cell output. While descriptions for key options follow, see\nCode Cells: Knitr in the Quarto\ndocumentation for descriptions of all available options.\neval: Whether to evaluate code cells. If False, the code is only echoed in the output:\necho: Whether to include cell source code in the output:\noutput: Whether to include the results of executing the code in the output:\nFormat options\nversion\ntitle\nfooter\nfooterlinks\nurls\ntext\nformat\ncheat_sheet-pdf\nexecute\neval\nFalse\necho\noutput"
+    },
+    {
+        "objectID": "user-guide",
+        "href": "user-guide.html#configuration-file-example",
+        "title": "User guide > Configuration file example",
+        "section": "Configuration file example",
+        "text": "Here is an example of a YAML configuration file:\nBy default, code cells are executed. To disable execution, for the execute option,\nset eval: false.\nTo disable execution and exclude the cell source code in the output,\nuse the eval, echo, and similar options within the code cell:\nBy default, the results of executing the code are included in the output. To exclude these\nresults, for the execute option, set output: false.\nConfiguration file example\nexecute\neval: false\neval\necho\nexecute\noutput: false"
+    },
+    {
+        "objectID": "user-guide",
+        "href": "user-guide.html#the-_quartoyml-file",
+        "title": "User guide > The _quarto.yml file",
+        "section": "The _quarto.yml file",
+        "text": "As indicated in Project Metadata\nin the Quarto documentation, all Quarto projects include a _quarto.yml configuration file. Any document\nrendered within the project directory automatically inherit the metadata defined at the project level.\n_quarto.yml file.\nTo change the directory that PDF files for cheat sheets are saved to, you would modify this line:\nThe _quarto.yml file\n_quarto.yml\n_quarto.yml"
+    },
+    {
+        "objectID": "user-guide",
+        "href": "user-guide.html#other-example-files",
+        "title": "User guide > Other example files",
+        "section": "Other example files",
+        "text": "A Quarto QMD file is a format used for integrating plain text markdown and code into a single\ncompiled document. The Examples directory contains these QMD files:\nThe cheat_sheet.qmd\nfile is a template that you can use to create your own cheat sheets.\nThe pymapdl_cheat_sheet_example_qmd\nfile is an example of a PyMAPDL cheat sheet.\nTo render the example of a PyMAPDL cheat sheet, run this command:\nIf you want to open a QMD file in Jupyter Notebook, follow these steps:\nInstall the jupytext package by running this command: pip install jupytext\nInstall the jupyter package by running this command: pip install jupyter\nOpen the QMD file in Jupyter Notebook by running this command: jupyter notebook cheat_sheet.qmd\nOther example files\nExamples\njupytext\npip install jupytext\njupyter\npip install jupyter\njupyter notebook cheat_sheet.qmd"
+    }
+]

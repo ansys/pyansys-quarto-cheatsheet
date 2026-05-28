@@ -1,0 +1,17 @@
+[
+  {
+    "name": "dev",
+    "version": "dev",
+    "url": "https://quarto-cheat-sheet.docs.pyansys.com/version/dev/"
+  },
+  {
+    "name": "2.0 (stable)",
+    "version": "2.0",
+    "url": "https://quarto-cheat-sheet.docs.pyansys.com/version/stable/"
+  },
+  {
+    "name": "1.0",
+    "version": "1.0",
+    "url": "https://quarto-cheat-sheet.docs.pyansys.com/version/1.0/"
+  }
+]
