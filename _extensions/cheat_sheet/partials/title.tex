@@ -20,12 +20,8 @@
 \usepackage[bookmarks=false]{hyperref}
 \usepackage{wrapfig}
 \usepackage{eso-pic}
-%add a monospace font
-%\usepackage[defaultfam,tabular,lining]{montserrat}
 \usepackage{float}
 \usepackage{tabularx}
-%\usepackage{blindtext}
-%\usepackage{overpic}
 \usepackage{multicol}
 \usepackage{calc}
 \usepackage{ifthen}
@@ -37,11 +33,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{seqsplit}
 \usepackage{sourcecodepro}
-%\usepackage{ragged2e}
-%\usepackage[dvipsnames]{xcolor}
 \usepackage[defaultsans]{opensans}
 
-% Minimal margins to maximize content area
+% ---------- PAGE LAYOUT ----------
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
      { \geometry{top=0.2in,left=0.2in,right=0.2in,bottom=0.2in} }
     {\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
@@ -49,106 +43,98 @@
         {\geometry{top=0.5cm,left=0.5cm,right=0.5cm,bottom=0.5cm} }
     }
 
-% Turn off header and footer
 \pagestyle{empty}
 
-\definecolor{silver}{RGB}{217,216,214}
-\definecolor{gold}{RGB}{255,183,27}
-\definecolor{steel}{RGB}{137,138,141}
-\definecolor{lead}{RGB}{55,58,54}
-\definecolor{bronze}{RGB}{200,146,17}
+% ---------- COLORS ----------
+\definecolor{shadecolor}{RGB}{236,236,236}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{blue}{RGB}{57,114,161}
-\definecolor{shadecolor}{RGB}{236,236,236} % #ececec
-\definecolor{lightgray}{RGB}{53,53,53} % #353535
 
-
-% Optimized section spacing for cheat sheet density
+% ---------- SECTION SPACING ----------
 \makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0mm}%
-  {0.8ex}%
-  {0.4ex}%
-  {\normalfont\large\bfseries
-   \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
+\renewcommand{\section}{\@startsection{section}{1}{0mm}
+  {0.8ex}{0.4ex}
+  {\normalfont\large\bfseries \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png}\hspace{0.2em}}}
 
-\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
-    {0.4ex}%
-    {0.15ex}%
-  {\normalfont\small\bfseries\color{black}}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}
+    {0.4ex}{0.15ex}
+  {\normalfont\small\bfseries}}
 
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
-    {0.3ex}%
-    {0.1ex}%
-  {\normalfont\footnotesize\bfseries\color{black}}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}
+    {0.3ex}{0.1ex}
+  {\normalfont\footnotesize\bfseries}}
 \makeatother
 
-% Optimized shaded block spacing for cheat sheet density
-\setlength{\FrameSep}{1pt}
-\setlength{\OuterFrameSep}{0pt}
-\renewenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+% ---------- GLOBAL SPACING FIX ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
 
-% Optimized code block styling for cheat sheet density
-\lstdefinestyle{python_style}{
-    backgroundcolor=\color{shadecolor}, % Set the background color
-    commentstyle=\color{codegreen}, % Style for comments
-    keywordstyle=\color{magenta}, % Style for keywords
-    numberstyle=\tiny\color{codegray}, % Style for line numbers
-    stringstyle=\color{codepurple}, % Style for strings
-    breaklines=true, % Enable line breaking
-    breakatwhitespace=false, % Allow long tokens (for example imports) to wrap
-    columns=fullflexible, % Improve wrapping/alignment in narrow columns
-    keepspaces=true, % Preserve spacing while still allowing line wraps
-    breakindent=0pt, % Avoid extra indentation that can push text into next column
-    linewidth=\linewidth, % Constrain listings to current column width
-    resetmargins=true, % Ensure no inherited margins widen the listing box
-    basicstyle=\ttfamily\scriptsize, % Smaller font for more content
-    frame=single, % Add a frame around the code
-    framesep=1pt, % padding between frame and code
-    xleftmargin=1pt, % No left margin for maximum width
-    rulecolor=\color{shadecolor},
-    showstringspaces=false, % Don't show spaces as special characters
-    tabsize=1, % Smaller tab size
+\AddToHook{begindocument/end}{
+  \setlength{\parskip}{0pt}
+  \setlength{\parindent}{0pt}
 }
+
+% ---------- MULTICOL FIX (CRITICAL) ----------
+\setlength{\columnsep}{12pt}
+\setlength{\multicolsep}{0pt}
+\setlength{\premulticols}{0pt}
+\setlength{\postmulticols}{0pt}
+\raggedcolumns  % <<< prevents stretching that creates blank space
+
+% ---------- FLOAT SPACING FIX ----------
+\setlength{\intextsep}{0pt}
+\setlength{\textfloatsep}{0pt}
+\setlength{\floatsep}{0pt}
+
+% ---------- LISTINGS (CODE BLOCKS) ----------
+\lstdefinestyle{python_style}{
+    backgroundcolor=\color{shadecolor},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    stringstyle=\color{codepurple},
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    framesep=3pt,
+    xleftmargin=0pt,
+    showstringspaces=false,
+    tabsize=1,
+    aboveskip=1pt,
+    belowskip=1pt
+}
+
 \lstset{
     style=python_style,
-    upquote=true,
+    upquote=true
 }
 
-% Pandoc emits code blocks as Highlighting/Verbatim environments.
-% Force robust wrapping for long identifiers (for example import paths).
+% ---------- VERBATIM (PANDOC CODE BLOCKS) ----------
 \RecustomVerbatimEnvironment{Highlighting}{Verbatim}{
     commandchars=\\\{\},
     breaklines=true,
     breakanywhere=true,
     fontsize=\scriptsize,
-    baselinestretch=0.95,
+    baselinestretch=0.9,
     breaksymbolleft={},
-    breaksymbolright={}
+    breaksymbolright={},
+    xleftmargin=0pt,
 }
-% Define code command
 
-\def\code#1{\textit{}{#1}}
+% Extra safety: force fvextra tight spacing
+\fvset{
+  formatcom=\setlength{\parskip}{0pt},
+  listparameters=\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}
+}
 
-% Define BibTeX command
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+% ---------- SHADED BLOCK ----------
+\setlength{\FrameSep}{1pt}
+\setlength{\OuterFrameSep}{0pt}
+\renewenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
 
-% Dont print section numbers
+% ---------- MISC ----------
 \setcounter{secnumdepth}{0}
-
-% Fixed spacing — no stretchable glue anywhere.
-% Pandoc loads parskip.sty which resets \parskip to "6pt plus 2pt minus 1pt"
-% inside its own \AtBeginDocument. \AddToHook{begindocument/end} fires AFTER
-% all \AtBeginDocument hooks, so it wins over parskip.sty.
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\raggedbottom
-\AddToHook{begindocument/end}{%
-  \setlength{\parskip}{0pt}%
-  \setlength{\parindent}{0pt}%
-}
-
-\setlength{\columnsep}{14pt}
-\setlength{\multicolsep}{0pt}
+\def\code#1{\textit{}{#1}}
