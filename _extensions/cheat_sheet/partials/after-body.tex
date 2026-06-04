@@ -15,8 +15,7 @@
 % limitations under the License.
 
 \end{multicols}
-\AtEndDocument{
-    \noindent\makebox[\linewidth]{\rule{\paperwidth}{2pt}}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{2pt}}
 $if(footer)$
 \begin{center}
 $footer$
@@ -25,6 +24,5 @@ $for(footerlinks)$
 \includegraphics[height=\fontcharht\font`\S]{./_static/slash.png} \href{$footerlinks.urls$}{{$footerlinks.text$}}
 $endfor$
 $endif$
-$endif$
 \end{center}
-}
+$endif$
