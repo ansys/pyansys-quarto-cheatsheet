@@ -65,7 +65,7 @@
 \definecolor{lightgray}{RGB}{53,53,53} % #353535
 
 
-% Section spacing — fully fixed, no plus/minus stretch.
+% Optimized section spacing for cheat sheet density
 \makeatletter
 \renewcommand{\section}{\@startsection{section}{1}{0mm}%
   {0.8ex}%
@@ -84,7 +84,7 @@
   {\normalfont\footnotesize\bfseries\color{black}}}
 \makeatother
 
-% Shaded block spacing — no stretchable vspace around code blocks.
+% Optimized shaded block spacing for cheat sheet density
 \setlength{\FrameSep}{1pt}
 \setlength{\OuterFrameSep}{0pt}
 \renewenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
